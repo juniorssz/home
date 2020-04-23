@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>02 - Vetores | acsjunior</title>
+    <link>/home/classes/r-fundamentals/vectors/</link>
+      <atom:link href="/home/classes/r-fundamentals/vectors/index.xml" rel="self" type="application/rss+xml" />
+    <description>02 - Vetores</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>02 - Vetores</title>
+      <link>/home/classes/r-fundamentals/vectors/</link>
+    </image>
+    
+    <item>
+      <title>Vetores Numéricos</title>
+      <link>/home/classes/r-fundamentals/vectors/numeric/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/home/classes/r-fundamentals/vectors/numeric/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#classe-numeric&#34;&gt;Classe numeric&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#classe-integer&#34;&gt;Classe integer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conversão&#34;&gt;Conversão&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operações-matemáticas&#34;&gt;Operações matemáticas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;classe-numeric&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Classe numeric&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v1&lt;/b&gt; com um único elemento:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v1 &amp;lt;- 2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v1&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v2&lt;/b&gt; com dois elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v2 &amp;lt;- c(2, 7)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v2&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v3&lt;/b&gt; com 5 elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3 &amp;lt;- c(2, 7, 8.4, 10.1, 14)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v3&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  2.0  7.0  8.4 10.1 14.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v4&lt;/b&gt; com uma sequência de 1 a 10:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v4 &amp;lt;- seq(from = 1, to = 10, by = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v4&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  1  2  3  4  5  6  7  8  9 10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v5&lt;/b&gt; com uma sequência de 0 a 50, contando de 5 em 5:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v5 &amp;lt;- seq(from = 0, to = 50, by = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v4&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  0  5 10 15 20 25 30 35 40 45 50&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Verificando a qual classe pertencem os vetores &lt;b&gt;v1&lt;/b&gt;, &lt;b&gt;v2&lt;/b&gt;, &lt;b&gt;v3&lt;/b&gt;, &lt;b&gt;v4&lt;/b&gt; e &lt;b&gt;v5&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Verificando a qual tipo pertencem os vetores &lt;b&gt;v1&lt;/b&gt;, &lt;b&gt;v2&lt;/b&gt;, &lt;b&gt;v3&lt;/b&gt;, &lt;b&gt;v4&lt;/b&gt; e &lt;b&gt;v5&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;double&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;double&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;double&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;double&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;double&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os objetos &lt;b&gt;v1&lt;/b&gt;, &lt;b&gt;v2&lt;/b&gt;, &lt;b&gt;v3&lt;/b&gt;, &lt;b&gt;v4&lt;/b&gt; e &lt;b&gt;v5&lt;/b&gt; são vetores:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os vetores &lt;b&gt;v1&lt;/b&gt;, &lt;b&gt;v2&lt;/b&gt;, &lt;b&gt;v3&lt;/b&gt;, &lt;b&gt;v4&lt;/b&gt; e &lt;b&gt;v5&lt;/b&gt; são da classe &lt;i&gt;numeric&lt;/i&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os vetores &lt;b&gt;v1&lt;/b&gt;, &lt;b&gt;v2&lt;/b&gt;, &lt;b&gt;v3&lt;/b&gt;, &lt;b&gt;v4&lt;/b&gt; e &lt;b&gt;v5&lt;/b&gt; são do tipo &lt;i&gt;double&lt;/i&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os vetores &lt;b&gt;v1&lt;/b&gt;, &lt;b&gt;v2&lt;/b&gt;, &lt;b&gt;v3&lt;/b&gt;, &lt;b&gt;v4&lt;/b&gt; e &lt;b&gt;v5&lt;/b&gt; são inteiros:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;classe-integer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Classe integer&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v6&lt;/b&gt; com uma sequência de 1 a 10:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v6 &amp;lt;- 1:10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v6&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  1  2  3  4  5  6  7  8  9 10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v7&lt;/b&gt; com 1 elemento do tipo inteiro:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v7 &amp;lt;- 10L&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v7&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando um vetor chamado &lt;b&gt;v8&lt;/b&gt; com 4 elementos do tipo inteiro:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v8 &amp;lt;- c(10L, 20L, 30L, 40L)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Imprimindo o vetor &lt;b&gt;v8&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10 20 30 40&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Verificando a qual classe pertencem os vetores &lt;b&gt;v6&lt;/b&gt;, &lt;b&gt;v7&lt;/b&gt; e &lt;b&gt;v8&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Verificando a qual tipo pertencem os vetores &lt;b&gt;v6&lt;/b&gt;, &lt;b&gt;v7&lt;/b&gt; e &lt;b&gt;v8&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;typeof(v8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os objetos &lt;b&gt;v6&lt;/b&gt;, &lt;b&gt;v7&lt;/b&gt; e &lt;b&gt;v8&lt;/b&gt; são vetores:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.vector(v8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os vetores &lt;b&gt;v6&lt;/b&gt;, &lt;b&gt;v7&lt;/b&gt; e &lt;b&gt;v8&lt;/b&gt; são numéricos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.numeric(v8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Testando se os vetores &lt;b&gt;v6&lt;/b&gt;, &lt;b&gt;v7&lt;/b&gt; e &lt;b&gt;v8&lt;/b&gt; são inteiros:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.integer(v8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Testando se os vetores &lt;b&gt;v6&lt;/b&gt;, &lt;b&gt;v7&lt;/b&gt; e &lt;b&gt;v8&lt;/b&gt; são do tipo double:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is.double(v8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conversão&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conversão&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Convertendo de &lt;b&gt;numeric&lt;/b&gt; para &lt;b&gt;integer&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  2.0  7.0  8.4 10.1 14.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3_int &amp;lt;- as.integer(v3)
+v3_int&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  2  7  8 10 14&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v3_int)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Convertendo de &lt;b&gt;integer&lt;/b&gt; para &lt;b&gt;numeric&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3_num &amp;lt;- as.numeric(v3_int)
+v3_num&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  2  7  8 10 14&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v3_num)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;operações-matemáticas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Operações matemáticas&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;adição-e-subtração&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Adição e subtração&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Somando dois algarismos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;2 + 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Somando dois vetores de 1 elemento:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n1 &amp;lt;- 2
+n2 &amp;lt;- 2
+n1 + n2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Subtraindo dois vetores de 1 elemento:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n1 &amp;lt;- 2
+n2 &amp;lt;- 2
+n1 - n2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Atribuindo o valor da soma a outro vetor:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n3 &amp;lt;- n1 + n2
+n3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Atribuindo o valor de uma expressão a outro vetor:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n4 &amp;lt;- n1 + n2 + n2 - n1
+n4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Alterando o valor atribuído ao vetor:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v1 &amp;lt;- 5
+v2 &amp;lt;- 2
+v1 &amp;lt;- 3
+v1 + v2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Somando dois vetores com o mesmo número de elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;a &amp;lt;- c(1,2,3)
+b &amp;lt;- c(2,4,6)
+a + b&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3 6 9&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Subtraindo dois vetores com o mesmo número de elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;b - a&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;a - b&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -1 -2 -3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Somando um algarismo e um vetor com múltiplos elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + a&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 3 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Subtraindo um algarismo e um vetor com múltiplos elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 - a&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  0 -1 -2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Somando dois vetores com diferentes comprimentos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- c(1, 2, 3, 4, 5)
+y &amp;lt;- c(10, 20)
+x + y&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in x + y: longer object length is not a multiple of shorter object
+## length&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 11 22 13 24 15&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Subtraindo dois vetores com diferentes comprimentos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x - y&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in x - y: longer object length is not a multiple of shorter object
+## length&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  -9 -18  -7 -16  -5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;y - x&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in y - x: longer object length is not a multiple of shorter object
+## length&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  9 18  7 16  5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multiplicação-e-divisão&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Multiplicação e divisão&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Multiplicando dois algarismos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;2 * 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Multiplicando dois vetores de 1 elemento:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;num1 &amp;lt;- 10
+num2 &amp;lt;- 3
+num1 * num2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 30&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Dividindo dois vetores de 1 elemento:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;num1 / num2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3.333333&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Obtendo o resto da divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;num1 %% num2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Obtendo a parte inteira da divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;num1 %/% num2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Obtendo a parte decimal da divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;num1 / num2 - num1 %/% num2 &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.3333333&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Multiplicando um vetor com múltiplos elementos por um algarismo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vet1 &amp;lt;- c(10,20,30)
+vet1 * 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 20 40 60&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Dividindo um vetor com múltiplos elementos por um algarismo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vet1 / 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  5 10 15&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Multiplicando dois vetores com mesmo número de elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vet2 &amp;lt;- c(1,2,3)
+vet1 * vet2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10 40 90&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Dividindo dois vetores com o mesmo número de elementos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vet1 / vet2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 10 10 10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Multiplicando dois vetores com diferentes comprimentos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vetor_a &amp;lt;- c(5,10,15,20,25,30)
+vetor_b &amp;lt;- c(2,5)
+vetor_a * vetor_b&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  10  50  30 100  50 150&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Dividindo dois vetores com diferentes comprimentos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vetor_a / vetor_b&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  2.5  2.0  7.5  4.0 12.5  6.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o produto vetorial entre dois vetores:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vet.x &amp;lt;- c(1,2,3)
+vet.y &amp;lt;- c(2,3,6)
+vet.x %*% vet.y&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1]
+## [1,]   26&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Dividindo um vetor por zero:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vet.x / 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] Inf Inf Inf&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Dividindo zero por um vetor:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;0 / vet.x&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0 0 0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;potenciação-radiciação-e-logaritmação&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Potenciação, radiciação e logaritmação&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando o vetor &lt;b&gt;v&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v &amp;lt;- c(2,3,4)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o quadrado de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(v^2\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v^2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  4  9 16&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v**2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  4  9 16&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o cubo de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(v^3\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v^3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  8 27 64&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v**3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  8 27 64&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Atribuindo &lt;span class=&#34;math inline&#34;&gt;\(v^2\)&lt;/span&gt; ao vetor &lt;b&gt;w&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;w &amp;lt;- v^2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando a raíz quadrada de &lt;b&gt;w&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\sqrt{w}\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sqrt(w)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 3 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Atribuindo &lt;span class=&#34;math inline&#34;&gt;\(v^3\)&lt;/span&gt; ao vetor &lt;b&gt;z&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;z &amp;lt;- v^3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando a raíz cúbica de &lt;b&gt;z&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\sqrt[3]{z}\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;z^(1/3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 3 4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;z**(1/3)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2 3 4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o exponencial de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(e^v\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;exp(v)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  7.389056 20.085537 54.598150&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;2.718281828459045235360287**v&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  7.389056 20.085537 54.598150&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;br.&lt;/p&gt;
+&lt;p&gt;Calculando o logaritmo natural de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\ln{v}\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;log(v)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.6931472 1.0986123 1.3862944&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o logaritmo de base 10 de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\log{v}\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;log10(v)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.3010300 0.4771213 0.6020600&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o logaritmo de base 2 de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\log_2{v}\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;log2(v)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.000000 1.584963 2.000000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o logaritmo de base 7 de &lt;b&gt;v&lt;/b&gt; (&lt;span class=&#34;math inline&#34;&gt;\(\log_7{v}\)&lt;/span&gt;):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;log(v, base = 7)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.3562072 0.5645750 0.7124144&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trigonometria&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Trigonometria&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;O número &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pi&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3.141593&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Seno: calculando &lt;span class=&#34;math inline&#34;&gt;\(sen(\frac{pi}{2})\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sin(pi/2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Cosseno: calculando &lt;span class=&#34;math inline&#34;&gt;\(cos(0)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cos(0)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Tangente: calculando &lt;span class=&#34;math inline&#34;&gt;\(tan(\frac{pi}{4})\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tan(pi/4)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Arco seno: calculando &lt;span class=&#34;math inline&#34;&gt;\(sen^{-1}(1)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;asin(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.570796&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Arco cosseno: calculando &lt;span class=&#34;math inline&#34;&gt;\(cos^{-1}(1)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;acos(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Arco tangente: calculando &lt;span class=&#34;math inline&#34;&gt;\(tan^{-1}(1)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;atan(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.7853982&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prioridades-matemáticas&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Prioridades matemáticas&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Adição e multiplicação:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + 2 * 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;(1 + 2) * 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 9&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Adição, multiplicação e potenciação:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + 2 * 3 ^ 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 19&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + (2 * 3) ^ 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 37&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;(1 + 2) * 3 ^ 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 27&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outras-funções&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Outras funções&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Criando o vetor &lt;b&gt;x&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- c(-3.041,-2.603,-1.456,0,1.223,2.342,3.568,20.974)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Somatório: calculando &lt;span class=&#34;math inline&#34;&gt;\(\sum_{i=1}^{n} x\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sum(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 21.007&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Módulo (absoluto): calculando &lt;span class=&#34;math inline&#34;&gt;\(|x|\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;abs(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  3.041  2.603  1.456  0.000  1.223  2.342  3.568 20.974&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Módulo (norma): calculando &lt;span class=&#34;math inline&#34;&gt;\(\lVert x \rVert\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sqrt(sum(x^2))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 21.8578&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando a média de &lt;b&gt;x&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2.625875&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando a mediana de &lt;b&gt;x&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;median(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.6115&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando a variância de &lt;b&gt;x&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;var(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 60.37164&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Calculando o desvio padrão de &lt;b&gt;x&lt;/b&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 7.769919&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Arredondando &lt;b&gt;x&lt;/b&gt; para 1 casa decimal:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;round(x, digits = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -3.0 -2.6 -1.5  0.0  1.2  2.3  3.6 21.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Arredondando &lt;b&gt;x&lt;/b&gt; para baixo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;floor(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -4 -3 -2  0  1  2  3 20&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Arredondando &lt;b&gt;x&lt;/b&gt; para cima:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ceiling(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -3 -2 -1  0  2  3  4 21&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Fatorial: obtendo &lt;span class=&#34;math inline&#34;&gt;\(5!\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;factorial(5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 120&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

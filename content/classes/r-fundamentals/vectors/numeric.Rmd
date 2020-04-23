@@ -1,0 +1,757 @@
+---
+title: Vetores Numéricos
+author: admin
+date: '2020-04-22'
+slug: numeric
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-04-22T21:04:03-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
+---
+
+## Classe numeric
+
+<br>
+
+Criando um vetor chamado <b>v1</b> com um único elemento:
+```{r}
+v1 <- 2
+```
+
+<br>
+
+Imprimindo o vetor <b>v1</b>:
+```{r}
+v1
+```
+
+<br>
+
+Criando um vetor chamado <b>v2</b> com dois elementos:
+```{r}
+v2 <- c(2, 7)
+```
+
+<br>
+
+Imprimindo o vetor <b>v2</b>:
+```{r}
+v2
+```
+
+<br>
+
+Criando um vetor chamado <b>v3</b> com 5 elementos:
+```{r}
+v3 <- c(2, 7, 8.4, 10.1, 14)
+```
+
+<br>
+
+Imprimindo o vetor <b>v3</b>:
+```{r}
+v3
+```
+
+<br>
+
+Criando um vetor chamado <b>v4</b> com uma sequência de 1 a 10:
+```{r}
+v4 <- seq(from = 1, to = 10, by = 1)
+```
+
+<br>
+
+Imprimindo o vetor <b>v4</b>:
+```{r}
+v4
+```
+
+<br>
+
+Criando um vetor chamado <b>v5</b> com uma sequência de 0 a 50, contando de 5 em 5:
+```{r}
+v5 <- seq(from = 0, to = 50, by = 5)
+```
+
+<br>
+
+Imprimindo o vetor <b>v4</b>:
+```{r}
+v5
+```
+
+<br>
+
+Verificando a qual classe pertencem os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b>:
+```{r}
+class(v1)
+class(v2)
+class(v3)
+class(v4)
+class(v5)
+```
+
+<br>
+
+Verificando a qual tipo pertencem os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b>:
+```{r}
+typeof(v1)
+typeof(v2)
+typeof(v3)
+typeof(v4)
+typeof(v5)
+```
+
+<br>
+
+Testando se os objetos <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são vetores:
+```{r}
+is.vector(v1)
+is.vector(v2)
+is.vector(v3)
+is.vector(v4)
+is.vector(v5)
+```
+
+<br>
+
+Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são da classe <i>numeric</i>:
+```{r}
+is.numeric(v1)
+is.numeric(v2)
+is.numeric(v3)
+is.numeric(v4)
+is.numeric(v5)
+```
+
+<br>
+
+Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são do tipo <i>double</i>:
+```{r}
+is.double(v1)
+is.double(v2)
+is.double(v3)
+is.double(v4)
+is.double(v5)
+```
+
+<br>
+
+Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são inteiros:
+```{r}
+is.integer(v1)
+is.integer(v2)
+is.integer(v3)
+is.integer(v4)
+is.integer(v5)
+```
+
+<br>
+
+## Classe integer
+
+<br>
+
+Criando um vetor chamado <b>v6</b> com uma sequência de 1 a 10:
+```{r}
+v6 <- 1:10
+```
+
+<br>
+
+Imprimindo o vetor <b>v6</b>:
+```{r}
+v6
+```
+
+<br>
+
+Criando um vetor chamado <b>v7</b> com 1 elemento do tipo inteiro:
+```{r}
+v7 <- 10L
+```
+
+<br>
+
+Imprimindo o vetor <b>v7</b>:
+```{r}
+v7
+```
+
+<br>
+
+Criando um vetor chamado <b>v8</b> com 4 elementos do tipo inteiro:
+```{r}
+v8 <- c(10L, 20L, 30L, 40L)
+```
+
+<br>
+
+Imprimindo o vetor <b>v8</b>:
+```{r}
+v8
+```
+
+<br>
+
+Verificando a qual classe pertencem os vetores <b>v6</b>, <b>v7</b> e <b>v8</b>:
+```{r}
+class(v6)
+class(v7)
+class(v8)
+```
+
+<br>
+
+Verificando a qual tipo pertencem os vetores <b>v6</b>, <b>v7</b> e <b>v8</b>:
+```{r}
+typeof(v6)
+typeof(v7)
+typeof(v8)
+```
+
+<br>
+
+Testando se os objetos <b>v6</b>, <b>v7</b> e <b>v8</b> são vetores:
+```{r}
+is.vector(v6)
+is.vector(v7)
+is.vector(v8)
+```
+
+<br>
+
+Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são numéricos:
+```{r}
+is.numeric(v6)
+is.numeric(v7)
+is.numeric(v8)
+```
+
+<br>
+
+Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são inteiros:
+```{r}
+is.integer(v6)
+is.integer(v7)
+is.integer(v8)
+```
+
+Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são do tipo double:
+```{r}
+is.double(v6)
+is.double(v7)
+is.double(v8)
+```
+
+<br>
+
+## Conversão
+
+<br>
+
+Convertendo de <b>numeric</b> para <b>integer</b>:
+```{r}
+v3
+v3_int <- as.integer(v3)
+v3_int
+class(v3_int)
+```
+
+<br>
+
+Convertendo de <b>integer</b> para <b>numeric</b>:
+```{r}
+v3_num <- as.numeric(v3_int)
+v3_num
+class(v3_num)
+```
+
+<br>
+
+## Operações matemáticas
+
+<br>
+
+#### Adição e subtração
+
+<br>
+
+Somando dois algarismos:
+```{r}
+2 + 2
+```
+
+<br>
+
+Somando dois vetores de 1 elemento:
+```{r}
+n1 <- 2
+n2 <- 2
+n1 + n2
+```
+
+<br>
+
+Subtraindo dois vetores de 1 elemento:
+```{r}
+n1 <- 2
+n2 <- 2
+n1 - n2
+```
+
+<br>
+
+Atribuindo o valor da soma a outro vetor:
+```{r}
+n3 <- n1 + n2
+n3
+```
+
+<br>
+
+Atribuindo o valor de uma expressão a outro vetor:
+```{r}
+n4 <- n1 + n2 + n2 - n1
+n4
+```
+
+<br>
+
+Alterando o valor atribuído ao vetor:
+```{r}
+v1 <- 5
+v2 <- 2
+v1 <- 3
+v1 + v2
+```
+
+<br>
+
+Somando dois vetores com o mesmo número de elementos:
+```{r}
+a <- c(1,2,3)
+b <- c(2,4,6)
+a + b
+```
+
+<br>
+
+Subtraindo dois vetores com o mesmo número de elementos:
+```{r}
+b - a
+a - b
+```
+
+<br>
+
+Somando um algarismo e um vetor com múltiplos elementos:
+```{r}
+1 + a
+```
+
+<br>
+
+Subtraindo um algarismo e um vetor com múltiplos elementos:
+```{r}
+1 - a
+```
+
+<br>
+
+Somando dois vetores com diferentes comprimentos:
+```{r}
+x <- c(1, 2, 3, 4, 5)
+y <- c(10, 20)
+x + y
+```
+
+Subtraindo dois vetores com diferentes comprimentos:
+```{r}
+x - y
+y - x
+```
+
+<br>
+
+#### Multiplicação e divisão
+
+<br>
+
+Multiplicando dois algarismos:
+```{r}
+2 * 2
+```
+
+<br>
+
+Multiplicando dois vetores de 1 elemento:
+```{r}
+num1 <- 10
+num2 <- 3
+num1 * num2
+```
+
+<br>
+
+Dividindo dois vetores de 1 elemento:
+```{r}
+num1 / num2
+```
+
+<br>
+
+Obtendo o resto da divisão:
+```{r}
+num1 %% num2
+```
+
+<br>
+
+Obtendo a parte inteira da divisão:
+```{r}
+num1 %/% num2
+```
+
+<br>
+
+Obtendo a parte decimal da divisão:
+```{r}
+num1 / num2 - num1 %/% num2 
+```
+
+
+<br>
+
+Multiplicando um vetor com múltiplos elementos por um algarismo:
+```{r}
+vet1 <- c(10,20,30)
+vet1 * 2
+```
+
+<br>
+
+Dividindo um vetor com múltiplos elementos por um algarismo:
+```{r}
+vet1 / 2
+```
+
+<br>
+
+Multiplicando dois vetores com mesmo número de elementos:
+```{r}
+vet2 <- c(1,2,3)
+vet1 * vet2
+```
+
+<br>
+
+Dividindo dois vetores com o mesmo número de elementos:
+```{r}
+vet1 / vet2
+```
+
+<br>
+
+Multiplicando dois vetores com diferentes comprimentos:
+```{r}
+vetor_a <- c(5,10,15,20,25,30)
+vetor_b <- c(2,5)
+vetor_a * vetor_b
+```
+
+<br>
+
+Dividindo dois vetores com diferentes comprimentos:
+```{r}
+vetor_a / vetor_b
+```
+
+<br>
+
+Calculando o produto vetorial entre dois vetores:
+```{r}
+vet.x <- c(1,2,3)
+vet.y <- c(2,3,6)
+vet.x %*% vet.y
+```
+
+<br>
+
+Dividindo um vetor por zero:
+```{r}
+vet.x / 0
+```
+
+Dividindo zero por um vetor:
+```{r}
+0 / vet.x
+```
+
+<br>
+
+#### Potenciação, radiciação e logaritmação
+
+<br>
+
+Criando o vetor <b>v</b>:
+```{r}
+v <- c(2,3,4)
+```
+
+<br>
+
+Calculando o quadrado de <b>v</b> ($v^2$):
+```{r}
+v^2
+v**2
+```
+
+
+<br>
+
+Calculando o cubo de <b>v</b> ($v^3$):
+```{r}
+v^3
+v**3
+```
+
+<br>
+
+Atribuindo $v^2$ ao vetor <b>w</b>:
+```{r}
+w <- v^2
+```
+
+<br>
+
+Calculando a raíz quadrada de <b>w</b> ($\sqrt{w}$):
+```{r}
+sqrt(w)
+```
+
+<br>
+
+Atribuindo $v^3$ ao vetor <b>z</b>:
+```{r}
+z <- v^3
+```
+
+<br>
+
+Calculando a raíz cúbica de <b>z</b> ($\sqrt[3]{z}$):
+```{r}
+z^(1/3)
+z**(1/3)
+```
+
+<br>
+
+Calculando o exponencial de <b>v</b> ($e^v$):
+```{r}
+exp(v)
+2.718281828459045235360287**v
+```
+
+<br.
+
+Calculando o logaritmo natural de <b>v</b> ($\ln{v}$):
+```{r}
+log(v)
+```
+
+<br>
+
+Calculando o logaritmo de base 10 de <b>v</b> ($\log{v}$):
+```{r}
+log10(v)
+```
+
+<br>
+
+Calculando o logaritmo de base 2 de <b>v</b> ($\log_2{v}$):
+```{r}
+log2(v)
+```
+
+<br>
+
+Calculando o logaritmo de base 7 de <b>v</b> ($\log_7{v}$):
+```{r}
+log(v, base = 7)
+```
+
+<br>
+
+#### Trigonometria
+
+<br>
+
+O número $\pi$:
+```{r}
+pi
+```
+
+<br>
+
+Seno: calculando $sen(\frac{pi}{2})$:
+```{r}
+sin(pi/2)
+```
+
+<br>
+
+Cosseno: calculando $cos(0)$:
+```{r}
+cos(0)
+```
+
+<br>
+
+Tangente: calculando $tan(\frac{pi}{4})$:
+```{r}
+tan(pi/4)
+```
+
+<br>
+
+Arco seno: calculando $sen^{-1}(1)$:
+```{r}
+asin(1)
+```
+
+<br>
+
+Arco cosseno: calculando $cos^{-1}(1)$:
+```{r}
+acos(1)
+```
+
+<br>
+
+Arco tangente: calculando $tan^{-1}(1)$:
+```{r}
+atan(1)
+```
+
+<br>
+
+#### Prioridades matemáticas
+
+<br>
+
+Adição e multiplicação:
+```{r}
+1 + 2 * 3
+(1 + 2) * 3
+```
+
+<br>
+
+Adição, multiplicação e potenciação:
+```{r}
+1 + 2 * 3 ^ 2
+1 + (2 * 3) ^ 2
+(1 + 2) * 3 ^ 2
+```
+
+<br>
+
+#### Outras funções
+
+<br>
+
+Criando o vetor <b>x</b>:
+```{r}
+x <- c(-3.041,-2.603,-1.456,0,1.223,2.342,3.568,20.974)
+```
+
+<br>
+
+Somatório: calculando $\sum_{i=1}^{n} x$: 
+```{r}
+sum(x)
+```
+
+<br>
+
+Módulo (absoluto): calculando $|x|$:
+```{r}
+abs(x)
+```
+
+<br>
+
+Módulo (norma): calculando $\lVert x \rVert$:
+```{r}
+sqrt(sum(x^2))
+```
+
+<br>
+
+Calculando a média de <b>x</b>:
+```{r}
+mean(x)
+```
+
+<br>
+
+Calculando a mediana de <b>x</b>:
+```{r}
+median(x)
+```
+
+<br>
+
+Calculando a variância de <b>x</b>:
+```{r}
+var(x)
+```
+
+<br>
+
+Calculando o desvio padrão de <b>x</b>:
+```{r}
+sd(x)
+```
+
+<br>
+
+Arredondando <b>x</b> para 1 casa decimal:
+```{r}
+round(x, digits = 1)
+```
+
+<br>
+
+Arredondando <b>x</b> para baixo:
+```{r}
+floor(x)
+```
+
+<br>
+
+Arredondando <b>x</b> para cima:
+```{r}
+ceiling(x)
+```
+
+<br>
+
+Fatorial: obtendo $5!$:
+```{r}
+factorial(5)
+```

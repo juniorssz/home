@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/home/classes/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/home/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
@@ -25,6 +30,26 @@
   <url>
     <loc>/home/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/home/classes/r-fundamentals/installation/</loc>
+    <lastmod>2020-04-22T20:55:38-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/home/classes/r-fundamentals/vectors/</loc>
+    <lastmod>2020-04-22T20:56:54-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/home/classes/r-fundamentals/</loc>
+    <lastmod>2020-04-22T20:53:27-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/home/classes/r-fundamentals/vectors/numeric/</loc>
+    <lastmod>2020-04-22T21:04:03-03:00</lastmod>
   </url>
   
   <url>
@@ -53,12 +78,12 @@
   </url>
   
   <url>
-    <loc>/home/authors/</loc>
+    <loc>/home/author/antonio-c.-da-silva-junior/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/home/author/nelson-bighetti/</loc>
+    <loc>/home/authors/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url>
   

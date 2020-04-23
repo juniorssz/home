@@ -6,13 +6,13 @@ linktitle: An Example Course
 menu:
   example:
     name: Overview
-    weight: 1
+    weight: 1000
 summary: Learn how to use Academic's docs layout for publishing online courses, software
   documentation, and tutorials.
 title: Overview
 toc: true
 type: docs
-weight: 1
+weight: 1000
 ---
 
 ## Flexibility

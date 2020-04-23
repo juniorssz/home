@@ -1,48 +1,37 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+  - course: Especialização em Data Science & Big Data
+    institution: Universidade Federal do Paraná
+    year: 2020
+  - course: Análise e Desenvolvimento de Sistemas
+    institution: Universidade Paulista
+    year: 2015
+email: "juniorssz@gmail.com"
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-organizations:
-- name: Stanford University
-  url: ""
-role: Professor of Artificial Intelligence
+- Modelos Lineares Generalizados
+- Mineração de dados
+role: Analista de Dados
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'
-- icon: twitter
+  link: 'mailto:juniorssz@gmail.com'
+- icon: linkedin
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://www.linkedin.com/in/juniorssz/
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/juniorssz
 superuser: true
-title: Nelson Bighetti
+title: Antonio C. da Silva Júnior
 user_groups:
 - Researchers
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Júnior é graduado em Análise e Desenvolvimento de Sistemas com especialização em Data Science & Big Data. Atuou por 9 anos com planejamento e controle na indústria de Óleo & Gás até se apaixonar por ciência de dados, área que atua desde 2018. É entusiasta da linguagem R e tem como principal habilidade a extração, limpeza e preparação de dados, mas tem se dedicado em adquirir profundidade nos conceitos teóricos de probabilidade e estatística, dado seu interesse em modelos lineares generalizados. Nas horas livres gosta de tocar um bom samba de raiz no violão, jogar FIFA e fazer maratonas de Netflix.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+É paulista da cidade de Santos, reside em Curitiba-PR desde 2018 e possui dupla nacionalidade (brasileira / portuguesa).

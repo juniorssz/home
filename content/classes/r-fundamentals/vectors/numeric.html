@@ -1,0 +1,543 @@
+---
+title: Vetores Numéricos
+author: admin
+date: '2020-04-22'
+slug: numeric
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-04-22T21:04:03-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#classe-numeric">Classe numeric</a></li>
+<li><a href="#classe-integer">Classe integer</a></li>
+<li><a href="#conversão">Conversão</a></li>
+<li><a href="#operações-matemáticas">Operações matemáticas</a></li>
+</ul>
+</div>
+
+<div id="classe-numeric" class="section level2">
+<h2>Classe numeric</h2>
+<p><br></p>
+<p>Criando um vetor chamado <b>v1</b> com um único elemento:</p>
+<pre class="r"><code>v1 &lt;- 2</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v1</b>:</p>
+<pre class="r"><code>v1</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p><br></p>
+<p>Criando um vetor chamado <b>v2</b> com dois elementos:</p>
+<pre class="r"><code>v2 &lt;- c(2, 7)</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v2</b>:</p>
+<pre class="r"><code>v2</code></pre>
+<pre><code>## [1] 2 7</code></pre>
+<p><br></p>
+<p>Criando um vetor chamado <b>v3</b> com 5 elementos:</p>
+<pre class="r"><code>v3 &lt;- c(2, 7, 8.4, 10.1, 14)</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v3</b>:</p>
+<pre class="r"><code>v3</code></pre>
+<pre><code>## [1]  2.0  7.0  8.4 10.1 14.0</code></pre>
+<p><br></p>
+<p>Criando um vetor chamado <b>v4</b> com uma sequência de 1 a 10:</p>
+<pre class="r"><code>v4 &lt;- seq(from = 1, to = 10, by = 1)</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v4</b>:</p>
+<pre class="r"><code>v4</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p><br></p>
+<p>Criando um vetor chamado <b>v5</b> com uma sequência de 0 a 50, contando de 5 em 5:</p>
+<pre class="r"><code>v5 &lt;- seq(from = 0, to = 50, by = 5)</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v4</b>:</p>
+<pre class="r"><code>v5</code></pre>
+<pre><code>##  [1]  0  5 10 15 20 25 30 35 40 45 50</code></pre>
+<p><br></p>
+<p>Verificando a qual classe pertencem os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b>:</p>
+<pre class="r"><code>class(v1)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(v2)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(v3)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(v4)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(v5)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<p>Verificando a qual tipo pertencem os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b>:</p>
+<pre class="r"><code>typeof(v1)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(v2)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(v3)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(v4)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>typeof(v5)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p><br></p>
+<p>Testando se os objetos <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são vetores:</p>
+<pre class="r"><code>is.vector(v1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.vector(v2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.vector(v3)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.vector(v4)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.vector(v5)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<p>Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são da classe <i>numeric</i>:</p>
+<pre class="r"><code>is.numeric(v1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.numeric(v2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.numeric(v3)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.numeric(v4)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.numeric(v5)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<p>Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são do tipo <i>double</i>:</p>
+<pre class="r"><code>is.double(v1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.double(v2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.double(v3)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.double(v4)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.double(v5)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<p>Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são inteiros:</p>
+<pre class="r"><code>is.integer(v1)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.integer(v2)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.integer(v3)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.integer(v4)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.integer(v5)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p><br></p>
+</div>
+<div id="classe-integer" class="section level2">
+<h2>Classe integer</h2>
+<p><br></p>
+<p>Criando um vetor chamado <b>v6</b> com uma sequência de 1 a 10:</p>
+<pre class="r"><code>v6 &lt;- 1:10</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v6</b>:</p>
+<pre class="r"><code>v6</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p><br></p>
+<p>Criando um vetor chamado <b>v7</b> com 1 elemento do tipo inteiro:</p>
+<pre class="r"><code>v7 &lt;- 10L</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v7</b>:</p>
+<pre class="r"><code>v7</code></pre>
+<pre><code>## [1] 10</code></pre>
+<p><br></p>
+<p>Criando um vetor chamado <b>v8</b> com 4 elementos do tipo inteiro:</p>
+<pre class="r"><code>v8 &lt;- c(10L, 20L, 30L, 40L)</code></pre>
+<p><br></p>
+<p>Imprimindo o vetor <b>v8</b>:</p>
+<pre class="r"><code>v8</code></pre>
+<pre><code>## [1] 10 20 30 40</code></pre>
+<p><br></p>
+<p>Verificando a qual classe pertencem os vetores <b>v6</b>, <b>v7</b> e <b>v8</b>:</p>
+<pre class="r"><code>class(v6)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>class(v7)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>class(v8)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Verificando a qual tipo pertencem os vetores <b>v6</b>, <b>v7</b> e <b>v8</b>:</p>
+<pre class="r"><code>typeof(v6)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>typeof(v7)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>typeof(v8)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Testando se os objetos <b>v6</b>, <b>v7</b> e <b>v8</b> são vetores:</p>
+<pre class="r"><code>is.vector(v6)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.vector(v7)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.vector(v8)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<p>Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são numéricos:</p>
+<pre class="r"><code>is.numeric(v6)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.numeric(v7)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.numeric(v8)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<p>Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são inteiros:</p>
+<pre class="r"><code>is.integer(v6)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.integer(v7)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.integer(v8)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são do tipo double:</p>
+<pre class="r"><code>is.double(v6)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.double(v7)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.double(v8)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<p><br></p>
+<p>Convertendo de <b>numeric</b> para <b>integer</b>:</p>
+<pre class="r"><code>v3</code></pre>
+<pre><code>## [1]  2.0  7.0  8.4 10.1 14.0</code></pre>
+<pre class="r"><code>v3_int &lt;- as.integer(v3)
+v3_int</code></pre>
+<pre><code>## [1]  2  7  8 10 14</code></pre>
+<pre class="r"><code>class(v3_int)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Convertendo de <b>integer</b> para <b>numeric</b>:</p>
+<pre class="r"><code>v3_num &lt;- as.numeric(v3_int)
+v3_num</code></pre>
+<pre><code>## [1]  2  7  8 10 14</code></pre>
+<pre class="r"><code>class(v3_num)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="operações-matemáticas" class="section level2">
+<h2>Operações matemáticas</h2>
+<p><br></p>
+<div id="adição-e-subtração" class="section level4">
+<h4>Adição e subtração</h4>
+<p><br></p>
+<p>Somando dois algarismos:</p>
+<pre class="r"><code>2 + 2</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Somando dois vetores de 1 elemento:</p>
+<pre class="r"><code>n1 &lt;- 2
+n2 &lt;- 2
+n1 + n2</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Subtraindo dois vetores de 1 elemento:</p>
+<pre class="r"><code>n1 &lt;- 2
+n2 &lt;- 2
+n1 - n2</code></pre>
+<pre><code>## [1] 0</code></pre>
+<p><br></p>
+<p>Atribuindo o valor da soma a outro vetor:</p>
+<pre class="r"><code>n3 &lt;- n1 + n2
+n3</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Atribuindo o valor de uma expressão a outro vetor:</p>
+<pre class="r"><code>n4 &lt;- n1 + n2 + n2 - n1
+n4</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Alterando o valor atribuído ao vetor:</p>
+<pre class="r"><code>v1 &lt;- 5
+v2 &lt;- 2
+v1 &lt;- 3
+v1 + v2</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p><br></p>
+<p>Somando dois vetores com o mesmo número de elementos:</p>
+<pre class="r"><code>a &lt;- c(1,2,3)
+b &lt;- c(2,4,6)
+a + b</code></pre>
+<pre><code>## [1] 3 6 9</code></pre>
+<p><br></p>
+<p>Subtraindo dois vetores com o mesmo número de elementos:</p>
+<pre class="r"><code>b - a</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<pre class="r"><code>a - b</code></pre>
+<pre><code>## [1] -1 -2 -3</code></pre>
+<p><br></p>
+<p>Somando um algarismo e um vetor com múltiplos elementos:</p>
+<pre class="r"><code>1 + a</code></pre>
+<pre><code>## [1] 2 3 4</code></pre>
+<p><br></p>
+<p>Subtraindo um algarismo e um vetor com múltiplos elementos:</p>
+<pre class="r"><code>1 - a</code></pre>
+<pre><code>## [1]  0 -1 -2</code></pre>
+<p><br></p>
+<p>Somando dois vetores com diferentes comprimentos:</p>
+<pre class="r"><code>x &lt;- c(1, 2, 3, 4, 5)
+y &lt;- c(10, 20)
+x + y</code></pre>
+<pre><code>## Warning in x + y: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## [1] 11 22 13 24 15</code></pre>
+<p>Subtraindo dois vetores com diferentes comprimentos:</p>
+<pre class="r"><code>x - y</code></pre>
+<pre><code>## Warning in x - y: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## [1]  -9 -18  -7 -16  -5</code></pre>
+<pre class="r"><code>y - x</code></pre>
+<pre><code>## Warning in y - x: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## [1]  9 18  7 16  5</code></pre>
+<p><br></p>
+</div>
+<div id="multiplicação-e-divisão" class="section level4">
+<h4>Multiplicação e divisão</h4>
+<p><br></p>
+<p>Multiplicando dois algarismos:</p>
+<pre class="r"><code>2 * 2</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Multiplicando dois vetores de 1 elemento:</p>
+<pre class="r"><code>num1 &lt;- 10
+num2 &lt;- 3
+num1 * num2</code></pre>
+<pre><code>## [1] 30</code></pre>
+<p><br></p>
+<p>Dividindo dois vetores de 1 elemento:</p>
+<pre class="r"><code>num1 / num2</code></pre>
+<pre><code>## [1] 3.333333</code></pre>
+<p><br></p>
+<p>Obtendo o resto da divisão:</p>
+<pre class="r"><code>num1 %% num2</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<p>Obtendo a parte inteira da divisão:</p>
+<pre class="r"><code>num1 %/% num2</code></pre>
+<pre><code>## [1] 3</code></pre>
+<p><br></p>
+<p>Obtendo a parte decimal da divisão:</p>
+<pre class="r"><code>num1 / num2 - num1 %/% num2 </code></pre>
+<pre><code>## [1] 0.3333333</code></pre>
+<p><br></p>
+<p>Multiplicando um vetor com múltiplos elementos por um algarismo:</p>
+<pre class="r"><code>vet1 &lt;- c(10,20,30)
+vet1 * 2</code></pre>
+<pre><code>## [1] 20 40 60</code></pre>
+<p><br></p>
+<p>Dividindo um vetor com múltiplos elementos por um algarismo:</p>
+<pre class="r"><code>vet1 / 2</code></pre>
+<pre><code>## [1]  5 10 15</code></pre>
+<p><br></p>
+<p>Multiplicando dois vetores com mesmo número de elementos:</p>
+<pre class="r"><code>vet2 &lt;- c(1,2,3)
+vet1 * vet2</code></pre>
+<pre><code>## [1] 10 40 90</code></pre>
+<p><br></p>
+<p>Dividindo dois vetores com o mesmo número de elementos:</p>
+<pre class="r"><code>vet1 / vet2</code></pre>
+<pre><code>## [1] 10 10 10</code></pre>
+<p><br></p>
+<p>Multiplicando dois vetores com diferentes comprimentos:</p>
+<pre class="r"><code>vetor_a &lt;- c(5,10,15,20,25,30)
+vetor_b &lt;- c(2,5)
+vetor_a * vetor_b</code></pre>
+<pre><code>## [1]  10  50  30 100  50 150</code></pre>
+<p><br></p>
+<p>Dividindo dois vetores com diferentes comprimentos:</p>
+<pre class="r"><code>vetor_a / vetor_b</code></pre>
+<pre><code>## [1]  2.5  2.0  7.5  4.0 12.5  6.0</code></pre>
+<p><br></p>
+<p>Calculando o produto vetorial entre dois vetores:</p>
+<pre class="r"><code>vet.x &lt;- c(1,2,3)
+vet.y &lt;- c(2,3,6)
+vet.x %*% vet.y</code></pre>
+<pre><code>##      [,1]
+## [1,]   26</code></pre>
+<p><br></p>
+<p>Dividindo um vetor por zero:</p>
+<pre class="r"><code>vet.x / 0</code></pre>
+<pre><code>## [1] Inf Inf Inf</code></pre>
+<p>Dividindo zero por um vetor:</p>
+<pre class="r"><code>0 / vet.x</code></pre>
+<pre><code>## [1] 0 0 0</code></pre>
+<p><br></p>
+</div>
+<div id="potenciação-radiciação-e-logaritmação" class="section level4">
+<h4>Potenciação, radiciação e logaritmação</h4>
+<p><br></p>
+<p>Criando o vetor <b>v</b>:</p>
+<pre class="r"><code>v &lt;- c(2,3,4)</code></pre>
+<p><br></p>
+<p>Calculando o quadrado de <b>v</b> (<span class="math inline">\(v^2\)</span>):</p>
+<pre class="r"><code>v^2</code></pre>
+<pre><code>## [1]  4  9 16</code></pre>
+<pre class="r"><code>v**2</code></pre>
+<pre><code>## [1]  4  9 16</code></pre>
+<p><br></p>
+<p>Calculando o cubo de <b>v</b> (<span class="math inline">\(v^3\)</span>):</p>
+<pre class="r"><code>v^3</code></pre>
+<pre><code>## [1]  8 27 64</code></pre>
+<pre class="r"><code>v**3</code></pre>
+<pre><code>## [1]  8 27 64</code></pre>
+<p><br></p>
+<p>Atribuindo <span class="math inline">\(v^2\)</span> ao vetor <b>w</b>:</p>
+<pre class="r"><code>w &lt;- v^2</code></pre>
+<p><br></p>
+<p>Calculando a raíz quadrada de <b>w</b> (<span class="math inline">\(\sqrt{w}\)</span>):</p>
+<pre class="r"><code>sqrt(w)</code></pre>
+<pre><code>## [1] 2 3 4</code></pre>
+<p><br></p>
+<p>Atribuindo <span class="math inline">\(v^3\)</span> ao vetor <b>z</b>:</p>
+<pre class="r"><code>z &lt;- v^3</code></pre>
+<p><br></p>
+<p>Calculando a raíz cúbica de <b>z</b> (<span class="math inline">\(\sqrt[3]{z}\)</span>):</p>
+<pre class="r"><code>z^(1/3)</code></pre>
+<pre><code>## [1] 2 3 4</code></pre>
+<pre class="r"><code>z**(1/3)</code></pre>
+<pre><code>## [1] 2 3 4</code></pre>
+<p><br></p>
+<p>Calculando o exponencial de <b>v</b> (<span class="math inline">\(e^v\)</span>):</p>
+<pre class="r"><code>exp(v)</code></pre>
+<pre><code>## [1]  7.389056 20.085537 54.598150</code></pre>
+<pre class="r"><code>2.718281828459045235360287**v</code></pre>
+<pre><code>## [1]  7.389056 20.085537 54.598150</code></pre>
+<p>&lt;br.</p>
+<p>Calculando o logaritmo natural de <b>v</b> (<span class="math inline">\(\ln{v}\)</span>):</p>
+<pre class="r"><code>log(v)</code></pre>
+<pre><code>## [1] 0.6931472 1.0986123 1.3862944</code></pre>
+<p><br></p>
+<p>Calculando o logaritmo de base 10 de <b>v</b> (<span class="math inline">\(\log{v}\)</span>):</p>
+<pre class="r"><code>log10(v)</code></pre>
+<pre><code>## [1] 0.3010300 0.4771213 0.6020600</code></pre>
+<p><br></p>
+<p>Calculando o logaritmo de base 2 de <b>v</b> (<span class="math inline">\(\log_2{v}\)</span>):</p>
+<pre class="r"><code>log2(v)</code></pre>
+<pre><code>## [1] 1.000000 1.584963 2.000000</code></pre>
+<p><br></p>
+<p>Calculando o logaritmo de base 7 de <b>v</b> (<span class="math inline">\(\log_7{v}\)</span>):</p>
+<pre class="r"><code>log(v, base = 7)</code></pre>
+<pre><code>## [1] 0.3562072 0.5645750 0.7124144</code></pre>
+<p><br></p>
+</div>
+<div id="trigonometria" class="section level4">
+<h4>Trigonometria</h4>
+<p><br></p>
+<p>O número <span class="math inline">\(\pi\)</span>:</p>
+<pre class="r"><code>pi</code></pre>
+<pre><code>## [1] 3.141593</code></pre>
+<p><br></p>
+<p>Seno: calculando <span class="math inline">\(sen(\frac{pi}{2})\)</span>:</p>
+<pre class="r"><code>sin(pi/2)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<p>Cosseno: calculando <span class="math inline">\(cos(0)\)</span>:</p>
+<pre class="r"><code>cos(0)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<p>Tangente: calculando <span class="math inline">\(tan(\frac{pi}{4})\)</span>:</p>
+<pre class="r"><code>tan(pi/4)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<p>Arco seno: calculando <span class="math inline">\(sen^{-1}(1)\)</span>:</p>
+<pre class="r"><code>asin(1)</code></pre>
+<pre><code>## [1] 1.570796</code></pre>
+<p><br></p>
+<p>Arco cosseno: calculando <span class="math inline">\(cos^{-1}(1)\)</span>:</p>
+<pre class="r"><code>acos(1)</code></pre>
+<pre><code>## [1] 0</code></pre>
+<p><br></p>
+<p>Arco tangente: calculando <span class="math inline">\(tan^{-1}(1)\)</span>:</p>
+<pre class="r"><code>atan(1)</code></pre>
+<pre><code>## [1] 0.7853982</code></pre>
+<p><br></p>
+</div>
+<div id="prioridades-matemáticas" class="section level4">
+<h4>Prioridades matemáticas</h4>
+<p><br></p>
+<p>Adição e multiplicação:</p>
+<pre class="r"><code>1 + 2 * 3</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>(1 + 2) * 3</code></pre>
+<pre><code>## [1] 9</code></pre>
+<p><br></p>
+<p>Adição, multiplicação e potenciação:</p>
+<pre class="r"><code>1 + 2 * 3 ^ 2</code></pre>
+<pre><code>## [1] 19</code></pre>
+<pre class="r"><code>1 + (2 * 3) ^ 2</code></pre>
+<pre><code>## [1] 37</code></pre>
+<pre class="r"><code>(1 + 2) * 3 ^ 2</code></pre>
+<pre><code>## [1] 27</code></pre>
+<p><br></p>
+</div>
+<div id="outras-funções" class="section level4">
+<h4>Outras funções</h4>
+<p><br></p>
+<p>Criando o vetor <b>x</b>:</p>
+<pre class="r"><code>x &lt;- c(-3.041,-2.603,-1.456,0,1.223,2.342,3.568,20.974)</code></pre>
+<p><br></p>
+<p>Somatório: calculando <span class="math inline">\(\sum_{i=1}^{n} x\)</span>:</p>
+<pre class="r"><code>sum(x)</code></pre>
+<pre><code>## [1] 21.007</code></pre>
+<p><br></p>
+<p>Módulo (absoluto): calculando <span class="math inline">\(|x|\)</span>:</p>
+<pre class="r"><code>abs(x)</code></pre>
+<pre><code>## [1]  3.041  2.603  1.456  0.000  1.223  2.342  3.568 20.974</code></pre>
+<p><br></p>
+<p>Módulo (norma): calculando <span class="math inline">\(\lVert x \rVert\)</span>:</p>
+<pre class="r"><code>sqrt(sum(x^2))</code></pre>
+<pre><code>## [1] 21.8578</code></pre>
+<p><br></p>
+<p>Calculando a média de <b>x</b>:</p>
+<pre class="r"><code>mean(x)</code></pre>
+<pre><code>## [1] 2.625875</code></pre>
+<p><br></p>
+<p>Calculando a mediana de <b>x</b>:</p>
+<pre class="r"><code>median(x)</code></pre>
+<pre><code>## [1] 0.6115</code></pre>
+<p><br></p>
+<p>Calculando a variância de <b>x</b>:</p>
+<pre class="r"><code>var(x)</code></pre>
+<pre><code>## [1] 60.37164</code></pre>
+<p><br></p>
+<p>Calculando o desvio padrão de <b>x</b>:</p>
+<pre class="r"><code>sd(x)</code></pre>
+<pre><code>## [1] 7.769919</code></pre>
+<p><br></p>
+<p>Arredondando <b>x</b> para 1 casa decimal:</p>
+<pre class="r"><code>round(x, digits = 1)</code></pre>
+<pre><code>## [1] -3.0 -2.6 -1.5  0.0  1.2  2.3  3.6 21.0</code></pre>
+<p><br></p>
+<p>Arredondando <b>x</b> para baixo:</p>
+<pre class="r"><code>floor(x)</code></pre>
+<pre><code>## [1] -4 -3 -2  0  1  2  3 20</code></pre>
+<p><br></p>
+<p>Arredondando <b>x</b> para cima:</p>
+<pre class="r"><code>ceiling(x)</code></pre>
+<pre><code>## [1] -3 -2 -1  0  2  3  4 21</code></pre>
+<p><br></p>
+<p>Fatorial: obtendo <span class="math inline">\(5!\)</span>:</p>
+<pre class="r"><code>factorial(5)</code></pre>
+<pre><code>## [1] 120</code></pre>
+</div>
+</div>

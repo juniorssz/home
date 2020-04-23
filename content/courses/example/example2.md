@@ -5,11 +5,11 @@ linktitle: Tips 3-4
 menu:
   example:
     parent: Example Topic
-    weight: 2
+    weight: 2000
 title: Example Page 2
 toc: true
 type: docs
-weight: 2
+weight: 2000
 ---
 
 Here are some more tips for getting started with Academic:
