@@ -127,9 +127,30 @@ d1</code></pre>
 <p>Data e Hora:</p>
 <pre class="r"><code>d2 &lt;- Sys.time()
 d2</code></pre>
-<pre><code>## [1] &quot;2020-04-23 11:58:27 -03&quot;</code></pre>
+<pre><code>## [1] &quot;2020-04-23 15:42:29 -03&quot;</code></pre>
 <pre class="r"><code>class(d2)</code></pre>
 <pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
+<p><br></p>
+<p>Casos especiais:</p>
+<pre class="r"><code>i &lt;- n2 / 0
+i</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<pre class="r"><code>1 + i</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<pre class="r"><code>class(i)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>sq &lt;- sqrt(-1)</code></pre>
+<pre><code>## Warning in sqrt(-1): NaNs produced</code></pre>
+<pre class="r"><code>sq</code></pre>
+<pre><code>## [1] NaN</code></pre>
+<pre class="r"><code>1 + sq</code></pre>
+<pre><code>## [1] NaN</code></pre>
+<pre class="r"><code>class(sq)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>1 + NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>class(NA)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
 <p><br></p>
 </div>
 <div id="o-operador-c" class="section level3">
@@ -151,17 +172,17 @@ v3</code></pre>
 <p><br></p>
 <p>Listando os objetos criados:</p>
 <pre class="r"><code>ls()</code></pre>
-<pre><code>##  [1] &quot;d1&quot; &quot;d2&quot; &quot;l1&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;t1&quot; &quot;t2&quot; &quot;v1&quot; &quot;v2&quot; &quot;v3&quot;</code></pre>
+<pre><code>##  [1] &quot;d1&quot; &quot;d2&quot; &quot;i&quot;  &quot;l1&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;sq&quot; &quot;t1&quot; &quot;t2&quot; &quot;v1&quot; &quot;v2&quot; &quot;v3&quot;</code></pre>
 <p><br></p>
 <p>Removendo um objeto:</p>
 <pre class="r"><code>rm(l1)
 ls()</code></pre>
-<pre><code>##  [1] &quot;d1&quot; &quot;d2&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;t1&quot; &quot;t2&quot; &quot;v1&quot; &quot;v2&quot; &quot;v3&quot;</code></pre>
+<pre><code>##  [1] &quot;d1&quot; &quot;d2&quot; &quot;i&quot;  &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;sq&quot; &quot;t1&quot; &quot;t2&quot; &quot;v1&quot; &quot;v2&quot; &quot;v3&quot;</code></pre>
 <p><br></p>
 <p>Removendo vários objetos:</p>
 <pre class="r"><code>rm(v1,v2,v3)
 ls()</code></pre>
-<pre><code>## [1] &quot;d1&quot; &quot;d2&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;t1&quot; &quot;t2&quot;</code></pre>
+<pre><code>## [1] &quot;d1&quot; &quot;d2&quot; &quot;i&quot;  &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;sq&quot; &quot;t1&quot; &quot;t2&quot;</code></pre>
 <p><br></p>
 <p>Removendo todos os objetos:</p>
 <pre class="r"><code>rm(list = ls())

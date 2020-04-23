@@ -153,6 +153,25 @@ class(d2)
 
 <br>
 
+Casos especiais:
+```{r}
+i <- n2 / 0
+i
+1 + i
+class(i)
+
+sq <- sqrt(-1)
+sq
+1 + sq
+class(sq)
+
+1 + NA
+class(NA)
+```
+
+
+<br>
+
 ### O operador <code>c()</code>
 
 <br>
