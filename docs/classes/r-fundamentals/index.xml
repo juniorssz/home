@@ -25,8 +25,9 @@
 &lt;li&gt;&lt;a href=&#34;#objetos&#34;&gt;Objetos&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#principais-tipos-de-dados&#34;&gt;Principais tipos de dados&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#o-operador-c&#34;&gt;O operador &lt;code&gt;c()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#gerenciando-objetos&#34;&gt;Gerenciando objetos:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gerenciando-objetos&#34;&gt;Gerenciando objetos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pacotes&#34;&gt;Pacotes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -122,7 +123,7 @@ d1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Data e Hora:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- Sys.time()
 d2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2020-04-23 03:49:03 -03&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2020-04-23 11:58:27 -03&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(d2)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;POSIXct&amp;quot; &amp;quot;POSIXt&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
@@ -142,7 +143,7 @@ v3&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;gerenciando-objetos&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Gerenciando objetos:&lt;/h3&gt;
+&lt;h3&gt;Gerenciando objetos&lt;/h3&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Listando os objetos criados:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ls()&lt;/code&gt;&lt;/pre&gt;
@@ -162,7 +163,30 @@ ls()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(list = ls())
 ls()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## character(0)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pacotes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pacotes&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Instalando o pacote &lt;i&gt;stringr&lt;/i&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;stringr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Utilizando a função &lt;code&gt;str_replace()&lt;/code&gt; do pacote &lt;i&gt;stringr&lt;/i&gt; para substituir um texto:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes &amp;lt;- c(&amp;quot;maçã&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;laranja&amp;quot;, &amp;quot;melancia&amp;quot;)
+nomes&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;maçã&amp;quot;     &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes2 &amp;lt;- stringr::str_replace(string = nomes, pattern = &amp;quot;maçã&amp;quot;, replacement = &amp;quot;uva&amp;quot;)
+nomes2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;uva&amp;quot;      &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Carregando o pacote &lt;i&gt;stringr&lt;/i&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(stringr)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Utilizando novamente a função &lt;code&gt;str_replace()&lt;/code&gt;, sem o prexixo &lt;code&gt;::stringr&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes3 &amp;lt;- str_replace(string = nomes, pattern = &amp;quot;maçã&amp;quot;, replacement = &amp;quot;uva&amp;quot;)
+nomes3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;uva&amp;quot;      &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>

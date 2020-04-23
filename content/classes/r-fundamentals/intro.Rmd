@@ -170,7 +170,7 @@ v3
 
 <br>
 
-### Gerenciando objetos:
+### Gerenciando objetos
 
 <br>
 
@@ -202,3 +202,41 @@ Removendo todos os objetos:
 rm(list = ls())
 ls()
 ```
+
+<br>
+
+## Pacotes
+
+<br>
+
+Instalando o pacote <i>stringr</i>:
+```{r, eval=FALSE}
+install.packages("stringr")
+```
+
+<br>
+
+Utilizando a função <code>str_replace()</code> do pacote <i>stringr</i> para substituir um texto:
+```{r}
+nomes <- c("maçã", "banana", "laranja", "melancia")
+nomes
+
+nomes2 <- stringr::str_replace(string = nomes, pattern = "maçã", replacement = "uva")
+nomes2
+```
+
+<br>
+
+Carregando o pacote <i>stringr</i>:
+```{r}
+library(stringr)
+```
+
+<br>
+
+Utilizando novamente a função <code>str_replace()</code>, sem o prexixo <code>::stringr</code>:
+```{r}
+nomes3 <- str_replace(string = nomes, pattern = "maçã", replacement = "uva")
+nomes3
+```
+

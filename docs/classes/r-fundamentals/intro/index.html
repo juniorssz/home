@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Operadores matemáticos: Objetos Principais tipos de dados O operador c() Gerenciando objetos:    Operadores matemáticos: 
+  <meta name="description" content="Operadores matemáticos: Objetos Principais tipos de dados O operador c() Gerenciando objetos  Pacotes   Operadores matemáticos: 
 Adição e subtração:
 2 &#43; 1 ## [1] 3 5 - 3 ## [1] 2">
 
@@ -240,7 +240,7 @@ Adição e subtração:
   <meta property="og:site_name" content="Antonio Júnior">
   <meta property="og:url" content="/home/classes/r-fundamentals/intro/">
   <meta property="og:title" content="Introdução | Antonio Júnior">
-  <meta property="og:description" content="Operadores matemáticos: Objetos Principais tipos de dados O operador c() Gerenciando objetos:    Operadores matemáticos: 
+  <meta property="og:description" content="Operadores matemáticos: Objetos Principais tipos de dados O operador c() Gerenciando objetos  Pacotes   Operadores matemáticos: 
 Adição e subtração:
 2 &#43; 1 ## [1] 3 5 - 3 ## [1] 2"><meta property="og:image" content="/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
@@ -521,8 +521,9 @@ Adição e subtração:
 <li><a href="#objetos">Objetos</a><ul>
 <li><a href="#principais-tipos-de-dados">Principais tipos de dados</a></li>
 <li><a href="#o-operador-c">O operador <code>c()</code></a></li>
-<li><a href="#gerenciando-objetos">Gerenciando objetos:</a></li>
+<li><a href="#gerenciando-objetos">Gerenciando objetos</a></li>
 </ul></li>
+<li><a href="#pacotes">Pacotes</a></li>
 </ul>
 </div>
 
@@ -618,7 +619,7 @@ d1</code></pre>
 <p>Data e Hora:</p>
 <pre class="r"><code>d2 &lt;- Sys.time()
 d2</code></pre>
-<pre><code>## [1] &quot;2020-04-23 03:49:03 -03&quot;</code></pre>
+<pre><code>## [1] &quot;2020-04-23 11:58:27 -03&quot;</code></pre>
 <pre class="r"><code>class(d2)</code></pre>
 <pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
 <p><br></p>
@@ -638,7 +639,7 @@ v3</code></pre>
 <p><br></p>
 </div>
 <div id="gerenciando-objetos" class="section level3">
-<h3>Gerenciando objetos:</h3>
+<h3>Gerenciando objetos</h3>
 <p><br></p>
 <p>Listando os objetos criados:</p>
 <pre class="r"><code>ls()</code></pre>
@@ -658,7 +659,30 @@ ls()</code></pre>
 <pre class="r"><code>rm(list = ls())
 ls()</code></pre>
 <pre><code>## character(0)</code></pre>
+<p><br></p>
 </div>
+</div>
+<div id="pacotes" class="section level2">
+<h2>Pacotes</h2>
+<p><br></p>
+<p>Instalando o pacote <i>stringr</i>:</p>
+<pre class="r"><code>install.packages(&quot;stringr&quot;)</code></pre>
+<p><br></p>
+<p>Utilizando a função <code>str_replace()</code> do pacote <i>stringr</i> para substituir um texto:</p>
+<pre class="r"><code>nomes &lt;- c(&quot;maçã&quot;, &quot;banana&quot;, &quot;laranja&quot;, &quot;melancia&quot;)
+nomes</code></pre>
+<pre><code>## [1] &quot;maçã&quot;     &quot;banana&quot;   &quot;laranja&quot;  &quot;melancia&quot;</code></pre>
+<pre class="r"><code>nomes2 &lt;- stringr::str_replace(string = nomes, pattern = &quot;maçã&quot;, replacement = &quot;uva&quot;)
+nomes2</code></pre>
+<pre><code>## [1] &quot;uva&quot;      &quot;banana&quot;   &quot;laranja&quot;  &quot;melancia&quot;</code></pre>
+<p><br></p>
+<p>Carregando o pacote <i>stringr</i>:</p>
+<pre class="r"><code>library(stringr)</code></pre>
+<p><br></p>
+<p>Utilizando novamente a função <code>str_replace()</code>, sem o prexixo <code>::stringr</code>:</p>
+<pre class="r"><code>nomes3 &lt;- str_replace(string = nomes, pattern = &quot;maçã&quot;, replacement = &quot;uva&quot;)
+nomes3</code></pre>
+<pre><code>## [1] &quot;uva&quot;      &quot;banana&quot;   &quot;laranja&quot;  &quot;melancia&quot;</code></pre>
 </div>
 
     </div>

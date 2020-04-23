@@ -714,3 +714,87 @@ Fatorial: obtendo $5!$:
 ```{r}
 factorial(5)
 ```
+
+<br>
+
+Amostragem sem reposição: selecionando 3 números aleatórios de uma sequência de 1 a 10:
+```{r}
+s <- 1:10
+sample(x = s, size = 3)
+
+sample(x = s, size = 3)
+
+sample(x = s, size = 3)
+``` 
+
+<br>
+
+Garantindo o mesmo resultado:
+```{r}
+set.seed(2020)
+sample(x = s, size = 3)
+
+set.seed(2020)
+sample(x = s, size = 3)
+
+set.seed(2020)
+sample(x = s, size = 3)
+```
+
+<br>
+
+Garantindo o mesmo resultado (diferente do anterior):
+```{r}
+set.seed(200)
+sample(x = s, size = 3)
+
+set.seed(200)
+sample(x = s, size = 3)
+
+set.seed(200)
+sample(x = s, size = 3)
+```
+
+
+<br>
+
+Amostragem com reposição: selecionando 3 números aleatórios de uma sequência de 1 a 6:
+```{r}
+set.seed(40)
+sample(x = s, size = 3, replace = TRUE)
+
+set.seed(150)
+sample(x = s, size = 3, replace = TRUE)
+``` 
+
+<br>
+
+Criando um dado virtual:
+```{r}
+dado <- function() {
+  out <- sample(x = 1:6, size = 1)
+  return(out)
+}
+```
+
+<br>
+
+Jogando o dado:
+```{r}
+dado()
+```
+
+<br>
+
+Jogando o dado novamente:
+```{r}
+dado()
+```
+
+<br>
+
+E novamente...
+```{r}
+dado()
+```
+
