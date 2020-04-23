@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fundamentos da Linguagem R | acsjunior</title>
+    <title>Fundamentos da Linguagem R | Antonio Júnior</title>
     <link>/home/classes/r-fundamentals/</link>
       <atom:link href="/home/classes/r-fundamentals/index.xml" rel="self" type="application/rss+xml" />
     <description>Fundamentos da Linguagem R</description>

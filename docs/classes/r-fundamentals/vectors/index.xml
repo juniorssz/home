@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>02 - Vetores | acsjunior</title>
+    <title>02 - Vetores | Antonio Júnior</title>
     <link>/home/classes/r-fundamentals/vectors/</link>
       <atom:link href="/home/classes/r-fundamentals/vectors/index.xml" rel="self" type="application/rss+xml" />
     <description>02 - Vetores</description>

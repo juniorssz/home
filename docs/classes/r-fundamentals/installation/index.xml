@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>01 - Instalação do R e RStudio | acsjunior</title>
+    <title>01 - Instalação do R e RStudio | Antonio Júnior</title>
     <link>/home/classes/r-fundamentals/installation/</link>
       <atom:link href="/home/classes/r-fundamentals/installation/index.xml" rel="self" type="application/rss+xml" />
     <description>01 - Instalação do R e RStudio</description>
