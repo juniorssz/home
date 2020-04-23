@@ -1,0 +1,170 @@
+---
+title: Introdução
+author: admin
+date: '2020-04-23'
+slug: intro
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-04-23T02:57:17-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+weight: 2
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#operadores-matemáticos">Operadores matemáticos:</a></li>
+<li><a href="#objetos">Objetos</a><ul>
+<li><a href="#principais-tipos-de-dados">Principais tipos de dados</a></li>
+<li><a href="#o-operador-c">O operador <code>c()</code></a></li>
+<li><a href="#gerenciando-objetos">Gerenciando objetos:</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="operadores-matemáticos" class="section level2">
+<h2>Operadores matemáticos:</h2>
+<p><br></p>
+<p>Adição e subtração:</p>
+<pre class="r"><code>2 + 1</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>5 - 3</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p><br></p>
+<p>Multiplicação e divisão:</p>
+<pre class="r"><code>3 * 4</code></pre>
+<pre><code>## [1] 12</code></pre>
+<pre class="r"><code>10 / 3</code></pre>
+<pre><code>## [1] 3.333333</code></pre>
+<pre class="r"><code>5 / 0</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<pre class="r"><code>0 / 5</code></pre>
+<pre><code>## [1] 0</code></pre>
+<p><br></p>
+<p>Resto da divisão:</p>
+<pre class="r"><code>10 %% 3</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<p>Parte inteira da divisão:</p>
+<pre class="r"><code>10 %/% 3</code></pre>
+<pre><code>## [1] 3</code></pre>
+<p><br></p>
+<p>Parte decimal da divisão:</p>
+<pre class="r"><code>10 / 3 - 10 %/% 3</code></pre>
+<pre><code>## [1] 0.3333333</code></pre>
+<p><br></p>
+</div>
+<div id="objetos" class="section level2">
+<h2>Objetos</h2>
+<p><br></p>
+<p>Regras para criar os nomes dos objetos:</p>
+<ul>
+<li>Não pode iniciar com número;</li>
+<li>Não pode iniciar com símbolos, como ^, !, $, @, +, -, /, ou *.</li>
+</ul>
+<p><br></p>
+<p>Principais objetos:</p>
+<ul>
+<li>Vetores</li>
+<li>Matrizes</li>
+<li>Listas</li>
+<li>Data frames</li>
+</ul>
+<p><br></p>
+<div id="principais-tipos-de-dados" class="section level3">
+<h3>Principais tipos de dados</h3>
+<p><br></p>
+<p>Numérico:</p>
+<pre class="r"><code>n1 &lt;- 5
+n1</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>n2 &lt;- 2.76
+n2</code></pre>
+<pre><code>## [1] 2.76</code></pre>
+<pre class="r"><code>class(n2)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<p>Texto:</p>
+<pre class="r"><code>t1 &lt;- &quot;a&quot;
+t1</code></pre>
+<pre><code>## [1] &quot;a&quot;</code></pre>
+<pre class="r"><code>t2 &lt;- &quot;fundamentos da linguagem R&quot;
+t2</code></pre>
+<pre><code>## [1] &quot;fundamentos da linguagem R&quot;</code></pre>
+<pre class="r"><code>class(t2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<p>Lógico:</p>
+<pre class="r"><code>l1 &lt;- TRUE
+l1</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>l2 &lt;- FALSE
+l2</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>class(l2)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<p>Data:</p>
+<pre class="r"><code>d1 &lt;- Sys.Date()
+d1</code></pre>
+<pre><code>## [1] &quot;2020-04-23&quot;</code></pre>
+<pre class="r"><code>class(d1)</code></pre>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
+<p><br></p>
+<p>Data e Hora:</p>
+<pre class="r"><code>d2 &lt;- Sys.time()
+d2</code></pre>
+<pre><code>## [1] &quot;2020-04-23 03:49:03 -03&quot;</code></pre>
+<pre class="r"><code>class(d2)</code></pre>
+<pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="o-operador-c" class="section level3">
+<h3>O operador <code>c()</code></h3>
+<p><br></p>
+<pre class="r"><code>v1 &lt;- c(1,2,3)
+v1</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<pre class="r"><code>v2 &lt;- c(&quot;gato&quot;, &quot;cachorro&quot;, &quot;macaco&quot;)
+v2</code></pre>
+<pre><code>## [1] &quot;gato&quot;     &quot;cachorro&quot; &quot;macaco&quot;</code></pre>
+<pre class="r"><code>v3 &lt;- c(TRUE, FALSE, TRUE)
+v3</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="gerenciando-objetos" class="section level3">
+<h3>Gerenciando objetos:</h3>
+<p><br></p>
+<p>Listando os objetos criados:</p>
+<pre class="r"><code>ls()</code></pre>
+<pre><code>##  [1] &quot;d1&quot; &quot;d2&quot; &quot;l1&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;t1&quot; &quot;t2&quot; &quot;v1&quot; &quot;v2&quot; &quot;v3&quot;</code></pre>
+<p><br></p>
+<p>Removendo um objeto:</p>
+<pre class="r"><code>rm(l1)
+ls()</code></pre>
+<pre><code>##  [1] &quot;d1&quot; &quot;d2&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;t1&quot; &quot;t2&quot; &quot;v1&quot; &quot;v2&quot; &quot;v3&quot;</code></pre>
+<p><br></p>
+<p>Removendo vários objetos:</p>
+<pre class="r"><code>rm(v1,v2,v3)
+ls()</code></pre>
+<pre><code>## [1] &quot;d1&quot; &quot;d2&quot; &quot;l2&quot; &quot;n1&quot; &quot;n2&quot; &quot;t1&quot; &quot;t2&quot;</code></pre>
+<p><br></p>
+<p>Removendo todos os objetos:</p>
+<pre class="r"><code>rm(list = ls())
+ls()</code></pre>
+<pre><code>## character(0)</code></pre>
+</div>
+</div>

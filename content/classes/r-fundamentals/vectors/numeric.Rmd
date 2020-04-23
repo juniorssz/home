@@ -21,193 +21,134 @@ output:
     toc_depth: 3
 ---
 
-## Classe numeric
+## Numeric
 
 <br>
 
-Criando um vetor chamado <b>v1</b> com um único elemento:
+Criando um vetor de 1 elemento:
 ```{r}
 v1 <- 2
-```
-
-<br>
-
-Imprimindo o vetor <b>v1</b>:
-```{r}
 v1
 ```
 
 <br>
 
-Criando um vetor chamado <b>v2</b> com dois elementos:
-```{r}
-v2 <- c(2, 7)
-```
 
-<br>
-
-Imprimindo o vetor <b>v2</b>:
+Criando um vetor com múltiplos elementos:
 ```{r}
+v2 <- c(2, 7, 8.4, 10.1, 14)
 v2
 ```
 
 <br>
 
-Criando um vetor chamado <b>v3</b> com 5 elementos:
+Criando uma sequência de 1 a 10:
 ```{r}
-v3 <- c(2, 7, 8.4, 10.1, 14)
-```
-
-<br>
-
-Imprimindo o vetor <b>v3</b>:
-```{r}
+v3 <- seq(from = 1, to = 10, by = 1)
 v3
 ```
 
 <br>
 
-Criando um vetor chamado <b>v4</b> com uma sequência de 1 a 10:
-```{r}
-v4 <- seq(from = 1, to = 10, by = 1)
-```
 
-<br>
-
-Imprimindo o vetor <b>v4</b>:
+Criando uma sequência de 0 a 50, contando de 5 em 5:
 ```{r}
+v4 <- seq(from = 0, to = 50, by = 5)
 v4
 ```
 
 <br>
 
-Criando um vetor chamado <b>v5</b> com uma sequência de 0 a 50, contando de 5 em 5:
-```{r}
-v5 <- seq(from = 0, to = 50, by = 5)
-```
-
-<br>
-
-Imprimindo o vetor <b>v4</b>:
-```{r}
-v5
-```
-
-<br>
-
-Verificando a qual classe pertencem os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b>:
+Verificando a classe:
 ```{r}
 class(v1)
 class(v2)
 class(v3)
 class(v4)
-class(v5)
 ```
 
 <br>
 
-Verificando a qual tipo pertencem os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b>:
+Verificando o tipo:
 ```{r}
 typeof(v1)
 typeof(v2)
 typeof(v3)
 typeof(v4)
-typeof(v5)
 ```
 
 <br>
 
-Testando se os objetos <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são vetores:
+Testando se são vetores:
 ```{r}
 is.vector(v1)
 is.vector(v2)
 is.vector(v3)
 is.vector(v4)
-is.vector(v5)
 ```
 
 <br>
 
-Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são da classe <i>numeric</i>:
+Testando se são numéricos:
 ```{r}
 is.numeric(v1)
 is.numeric(v2)
 is.numeric(v3)
 is.numeric(v4)
-is.numeric(v5)
 ```
 
 <br>
 
-Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são do tipo <i>double</i>:
+Testando se são <i>double</i>:
 ```{r}
 is.double(v1)
 is.double(v2)
 is.double(v3)
 is.double(v4)
-is.double(v5)
 ```
 
 <br>
 
-Testando se os vetores <b>v1</b>, <b>v2</b>, <b>v3</b>, <b>v4</b> e <b>v5</b> são inteiros:
+Testando se são <i>integer</i>:
 ```{r}
 is.integer(v1)
 is.integer(v2)
 is.integer(v3)
 is.integer(v4)
-is.integer(v5)
 ```
 
 <br>
 
-## Classe integer
+## Integer
 
 <br>
 
-Criando um vetor chamado <b>v6</b> com uma sequência de 1 a 10:
+Criando um vetor chamado de 1 elemento do tipo inteiro:
 ```{r}
-v6 <- 1:10
-```
-
-<br>
-
-Imprimindo o vetor <b>v6</b>:
-```{r}
+v6 <- 10L
 v6
 ```
 
 <br>
 
-Criando um vetor chamado <b>v7</b> com 1 elemento do tipo inteiro:
+Criando um vetor de múltiplos elementos do tipo inteiro:
 ```{r}
-v7 <- 10L
-```
-
-<br>
-
-Imprimindo o vetor <b>v7</b>:
-```{r}
+v7 <- c(10L, 20L, 30L, 40L)
 v7
 ```
 
 <br>
 
-Criando um vetor chamado <b>v8</b> com 4 elementos do tipo inteiro:
-```{r}
-v8 <- c(10L, 20L, 30L, 40L)
-```
 
-<br>
-
-Imprimindo o vetor <b>v8</b>:
+Criando uma sequência de 1 a 10 de números inteiros:
 ```{r}
+v8 <- 1:10
 v8
 ```
 
 <br>
 
-Verificando a qual classe pertencem os vetores <b>v6</b>, <b>v7</b> e <b>v8</b>:
+Verificando a classe:
 ```{r}
 class(v6)
 class(v7)
@@ -216,7 +157,7 @@ class(v8)
 
 <br>
 
-Verificando a qual tipo pertencem os vetores <b>v6</b>, <b>v7</b> e <b>v8</b>:
+Verificando o tipo:
 ```{r}
 typeof(v6)
 typeof(v7)
@@ -225,7 +166,7 @@ typeof(v8)
 
 <br>
 
-Testando se os objetos <b>v6</b>, <b>v7</b> e <b>v8</b> são vetores:
+Testando se são vetores:
 ```{r}
 is.vector(v6)
 is.vector(v7)
@@ -234,7 +175,7 @@ is.vector(v8)
 
 <br>
 
-Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são numéricos:
+Testando se são numéricos:
 ```{r}
 is.numeric(v6)
 is.numeric(v7)
@@ -243,14 +184,16 @@ is.numeric(v8)
 
 <br>
 
-Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são inteiros:
+Testando se são <i>integers</i>:
 ```{r}
 is.integer(v6)
 is.integer(v7)
 is.integer(v8)
 ```
 
-Testando se os vetores <b>v6</b>, <b>v7</b> e <b>v8</b> são do tipo double:
+<br>
+
+Testando se são <i>double</i>:
 ```{r}
 is.double(v6)
 is.double(v7)
@@ -263,7 +206,7 @@ is.double(v8)
 
 <br>
 
-Convertendo de <b>numeric</b> para <b>integer</b>:
+Convertendo de <i>numeric</i> para <i>integer</i>:
 ```{r}
 v3
 v3_int <- as.integer(v3)
@@ -273,7 +216,7 @@ class(v3_int)
 
 <br>
 
-Convertendo de <b>integer</b> para <b>numeric</b>:
+Convertendo de <i>integer</i> para <i>numeric</i>:
 ```{r}
 v3_num <- as.numeric(v3_int)
 v3_num
@@ -290,13 +233,6 @@ class(v3_num)
 
 <br>
 
-Somando dois algarismos:
-```{r}
-2 + 2
-```
-
-<br>
-
 Somando dois vetores de 1 elemento:
 ```{r}
 n1 <- 2
@@ -308,8 +244,6 @@ n1 + n2
 
 Subtraindo dois vetores de 1 elemento:
 ```{r}
-n1 <- 2
-n2 <- 2
 n1 - n2
 ```
 
@@ -372,29 +306,24 @@ Subtraindo um algarismo e um vetor com múltiplos elementos:
 
 <br>
 
-Somando dois vetores com diferentes comprimentos:
+Somando dois vetores com diferentes comprimentos (não múltiplos):
 ```{r}
 x <- c(1, 2, 3, 4, 5)
 y <- c(10, 20)
 x + y
 ```
 
-Subtraindo dois vetores com diferentes comprimentos:
-```{r}
-x - y
-y - x
-```
+<br>
 
+Somando dois vetores com diferentes comprimentos (múltiplos):
+```{r}
+i <- c(1, 2, 3, 4, 5, 6)
+j <- c(100, 200)
+i + j
+```
 <br>
 
 #### Multiplicação e divisão
-
-<br>
-
-Multiplicando dois algarismos:
-```{r}
-2 * 2
-```
 
 <br>
 
@@ -466,7 +395,16 @@ vet1 / vet2
 
 <br>
 
-Multiplicando dois vetores com diferentes comprimentos:
+Multiplicando dois vetores com diferentes comprimentos (não múltiplos):
+```{r}
+vetor_x <- c(5,10,15,20,25)
+vetor_y <- c(1,2)
+vetor_x * vetor_y
+```
+
+<br>
+
+Multiplicando dois vetores com diferentes comprimentos (múltiplos):
 ```{r}
 vetor_a <- c(5,10,15,20,25,30)
 vetor_b <- c(2,5)
@@ -475,30 +413,32 @@ vetor_a * vetor_b
 
 <br>
 
-Dividindo dois vetores com diferentes comprimentos:
-```{r}
-vetor_a / vetor_b
-```
-
-<br>
-
-Calculando o produto vetorial entre dois vetores:
-```{r}
-vet.x <- c(1,2,3)
-vet.y <- c(2,3,6)
-vet.x %*% vet.y
-```
-
-<br>
-
 Dividindo um vetor por zero:
 ```{r}
-vet.x / 0
+vetor_a / 0
 ```
+
+<br>
 
 Dividindo zero por um vetor:
 ```{r}
-0 / vet.x
+0 / vetor_a
+```
+
+<br>
+
+Produto interno: calculando $\overrightarrow{v} \bullet \overrightarrow{u}$:
+```{r}
+v <- c(2,3,4)
+u <- c(1,2,3)
+v %*% u
+```
+
+<br>
+
+Produto vetorial: calculando $\overrightarrow{v} \times \overrightarrow{u}$:
+```{r}
+v %o% u
 ```
 
 <br>
@@ -507,14 +447,7 @@ Dividindo zero por um vetor:
 
 <br>
 
-Criando o vetor <b>v</b>:
-```{r}
-v <- c(2,3,4)
-```
-
-<br>
-
-Calculando o quadrado de <b>v</b> ($v^2$):
+Quadrado: calculando $v^2$:
 ```{r}
 v^2
 v**2
@@ -523,7 +456,7 @@ v**2
 
 <br>
 
-Calculando o cubo de <b>v</b> ($v^3$):
+Cubo: calculando $v^3$:
 ```{r}
 v^3
 v**3
@@ -538,7 +471,7 @@ w <- v^2
 
 <br>
 
-Calculando a raíz quadrada de <b>w</b> ($\sqrt{w}$):
+Raíz quadrada: calculando $\sqrt{w}$:
 ```{r}
 sqrt(w)
 ```
@@ -552,7 +485,7 @@ z <- v^3
 
 <br>
 
-Calculando a raíz cúbica de <b>z</b> ($\sqrt[3]{z}$):
+Raíz cúbica: calculando $\sqrt[3]{z}$:
 ```{r}
 z^(1/3)
 z**(1/3)
@@ -560,7 +493,7 @@ z**(1/3)
 
 <br>
 
-Calculando o exponencial de <b>v</b> ($e^v$):
+Exponencial: calculando $e^v$:
 ```{r}
 exp(v)
 2.718281828459045235360287**v
@@ -568,28 +501,28 @@ exp(v)
 
 <br.
 
-Calculando o logaritmo natural de <b>v</b> ($\ln{v}$):
+Logaritmo natural: calculando $\ln{v}$:
 ```{r}
 log(v)
 ```
 
 <br>
 
-Calculando o logaritmo de base 10 de <b>v</b> ($\log{v}$):
+Logaritmo de base 10: calculando $\log{v}$:
 ```{r}
 log10(v)
 ```
 
 <br>
 
-Calculando o logaritmo de base 2 de <b>v</b> ($\log_2{v}$):
+Logaritmo de base 2: calculando $\log_2{v}$:
 ```{r}
 log2(v)
 ```
 
 <br>
 
-Calculando o logaritmo de base 7 de <b>v</b> ($\log_7{v}$):
+Logaritmo de base 7: calculando $\log_7{v}$:
 ```{r}
 log(v, base = 7)
 ```
@@ -607,7 +540,7 @@ pi
 
 <br>
 
-Seno: calculando $sen(\frac{pi}{2})$:
+Seno: calculando $sen(\frac{\pi}{2})$:
 ```{r}
 sin(pi/2)
 ```
@@ -621,7 +554,7 @@ cos(0)
 
 <br>
 
-Tangente: calculando $tan(\frac{pi}{4})$:
+Tangente: calculando $tan(\frac{\pi}{4})$:
 ```{r}
 tan(pi/4)
 ```
@@ -670,19 +603,45 @@ Adição, multiplicação e potenciação:
 
 <br>
 
-#### Outras funções
+#### Funções
 
 <br>
 
-Criando o vetor <b>x</b>:
+$f(x) = 2x$
 ```{r}
-x <- c(-3.041,-2.603,-1.456,0,1.223,2.342,3.568,20.974)
+f <- function(x) {
+  out <- 2 * x
+  return(out)
+}
+
+f(2)
+
+f(4)
 ```
+
+<br>
+
+$g(x,y) = x^2 + y^2$
+```{r}
+g <- function(x, y) {
+  out <- x^2 + y^2
+  return(out)
+}
+
+g(1,2)
+
+g(2,3)
+```
+
+<br>
+
+#### Outras funções
 
 <br>
 
 Somatório: calculando $\sum_{i=1}^{n} x$: 
 ```{r}
+x <- c(-3.041,-2.603,-1.456,0,1.223,2.342,3.568,20.974)
 sum(x)
 ```
 

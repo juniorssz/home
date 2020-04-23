@@ -1,5 +1,5 @@
 ---
-title: Instalação do R e RStudio
+title: Vetores
 author: ''
 date: '2020-04-22'
 slug: _index
@@ -8,12 +8,12 @@ tags: []
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2020-04-22T20:55:38-03:00'
+lastmod: '2020-04-22T20:56:54-03:00'
 featured: no
 image:
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
-weight: 1
+weight: 3
 ---
