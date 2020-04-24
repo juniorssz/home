@@ -15,7 +15,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
-weight: 1
+weight: 3
 output:
   blogdown::html_page:
     toc: true
@@ -433,6 +433,7 @@ Produto interno: calculando $\overrightarrow{v} \bullet \overrightarrow{u}$:
 v <- c(2,3,4)
 u <- c(1,2,3)
 v %*% u
+class(v %*% u)
 ```
 
 <br>
@@ -440,6 +441,7 @@ v %*% u
 Produto vetorial: calculando $\overrightarrow{v} \times \overrightarrow{u}$:
 ```{r}
 v %o% u
+class(v %o% u)
 ```
 
 <br>

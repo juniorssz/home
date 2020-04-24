@@ -338,6 +338,8 @@ u &amp;lt;- c(1,2,3)
 v %*% u&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##      [,1]
 ## [1,]   20&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v %*% u)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Produto vetorial: calculando &lt;span class=&#34;math inline&#34;&gt;\(\overrightarrow{v} \times \overrightarrow{u}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v %o% u&lt;/code&gt;&lt;/pre&gt;
@@ -345,6 +347,8 @@ v %*% u&lt;/code&gt;&lt;/pre&gt;
 ## [1,]    2    4    6
 ## [2,]    3    6    9
 ## [3,]    4    8   12&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v %o% u)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;potenciação-radiciação-e-logaritmação&#34; class=&#34;section level4&#34;&gt;
@@ -528,11 +532,11 @@ sum(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Amostragem sem reposição: selecionando 3 números aleatórios de uma sequência de 1 a 10:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;s &amp;lt;- 1:10
 sample(x = s, size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 9 8 6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 5 3 7&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample(x = s, size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 9 4 7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  7  3 10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample(x = s, size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 6 3 7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  4  5 10&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Garantindo o mesmo resultado:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2020)
@@ -750,6 +754,17 @@ codigos_2p&lt;/code&gt;&lt;/pre&gt;
 codigos_4u &amp;lt;- direita(texto = codigos, n = 4)
 codigos_4u&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;1234&amp;quot; &amp;quot;4321&amp;quot; &amp;quot;5678&amp;quot; &amp;quot;8765&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Separando o texto em função de um caracter:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_texto &amp;lt;- c(&amp;quot;20/04/2020&amp;quot;)
+data_texto&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;20/04/2020&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_sep &amp;lt;- strsplit(x = data_texto, split = &amp;quot;/&amp;quot;)
+data_sep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] &amp;quot;20&amp;quot;   &amp;quot;04&amp;quot;   &amp;quot;2020&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(data_sep)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;list&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>

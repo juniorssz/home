@@ -27,10 +27,7 @@
   
     
   
-  <meta name="description" content="Numeric Integer Conversão Operações matemáticas   Numeric 
-Criando um vetor de 1 elemento:
-v1 &lt;- 2 v1 ## [1] 2 
-Criando um vetor com múltiplos elementos:">
+  <meta name="description" content="Numeric Integer Conversão Operações matemáticas   Numeric">
 
   
   <link rel="alternate" hreflang="en-us" href="/home/classes/r-fundamentals/vectors/numeric/">
@@ -241,10 +238,7 @@ Criando um vetor com múltiplos elementos:">
   <meta property="og:site_name" content="Antonio Júnior">
   <meta property="og:url" content="/home/classes/r-fundamentals/vectors/numeric/">
   <meta property="og:title" content="Vetores Numéricos | Antonio Júnior">
-  <meta property="og:description" content="Numeric Integer Conversão Operações matemáticas   Numeric 
-Criando um vetor de 1 elemento:
-v1 &lt;- 2 v1 ## [1] 2 
-Criando um vetor com múltiplos elementos:"><meta property="og:image" content="/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="Numeric Integer Conversão Operações matemáticas   Numeric"><meta property="og:image" content="/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
@@ -836,6 +830,8 @@ u &lt;- c(1,2,3)
 v %*% u</code></pre>
 <pre><code>##      [,1]
 ## [1,]   20</code></pre>
+<pre class="r"><code>class(v %*% u)</code></pre>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
 <p><br></p>
 <p>Produto vetorial: calculando <span class="math inline">\(\overrightarrow{v} \times \overrightarrow{u}\)</span>:</p>
 <pre class="r"><code>v %o% u</code></pre>
@@ -843,6 +839,8 @@ v %*% u</code></pre>
 ## [1,]    2    4    6
 ## [2,]    3    6    9
 ## [3,]    4    8   12</code></pre>
+<pre class="r"><code>class(v %o% u)</code></pre>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
 <p><br></p>
 </div>
 <div id="potenciação-radiciação-e-logaritmação" class="section level4">
@@ -1026,11 +1024,11 @@ sum(x)</code></pre>
 <p>Amostragem sem reposição: selecionando 3 números aleatórios de uma sequência de 1 a 10:</p>
 <pre class="r"><code>s &lt;- 1:10
 sample(x = s, size = 3)</code></pre>
-<pre><code>## [1] 9 8 6</code></pre>
+<pre><code>## [1] 8 5 4</code></pre>
 <pre class="r"><code>sample(x = s, size = 3)</code></pre>
-<pre><code>## [1] 9 4 7</code></pre>
+<pre><code>## [1]  8 10  1</code></pre>
 <pre class="r"><code>sample(x = s, size = 3)</code></pre>
-<pre><code>## [1] 6 3 7</code></pre>
+<pre><code>## [1] 4 8 6</code></pre>
 <p><br></p>
 <p>Garantindo o mesmo resultado:</p>
 <pre class="r"><code>set.seed(2020)

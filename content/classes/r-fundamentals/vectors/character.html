@@ -15,7 +15,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
-weight: 2
+weight: 4
 output:
   blogdown::html_page:
     toc: true
@@ -180,4 +180,23 @@ codigos_2p</code></pre>
 codigos_4u &lt;- direita(texto = codigos, n = 4)
 codigos_4u</code></pre>
 <pre><code>## [1] &quot;1234&quot; &quot;4321&quot; &quot;5678&quot; &quot;8765&quot;</code></pre>
+<p><br></p>
+<p>Extraindo os caracteres antes da barra de forma automatizada:</p>
+<pre class="r"><code>codigos2 &lt;- c(&quot;003/2020&quot;, &quot;1242/2020&quot;, &quot;13579/2020&quot;)
+prefixos &lt;- substr(x = codigos2, 
+                   start = 1,
+                   stop = as.numeric(regexpr(pattern = &quot;/&quot;, text = codigos2)) - 1)
+prefixos</code></pre>
+<pre><code>## [1] &quot;003&quot;   &quot;1242&quot;  &quot;13579&quot;</code></pre>
+<p><br></p>
+<p>Separando o texto em função de um caracter:</p>
+<pre class="r"><code>data_texto &lt;- c(&quot;20/04/2020&quot;)
+data_texto</code></pre>
+<pre><code>## [1] &quot;20/04/2020&quot;</code></pre>
+<pre class="r"><code>data_sep &lt;- strsplit(x = data_texto, split = &quot;/&quot;)
+data_sep</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;20&quot;   &quot;04&quot;   &quot;2020&quot;</code></pre>
+<pre class="r"><code>class(data_sep)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
 </div>

@@ -15,7 +15,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
-weight: 2
+weight: 4
 output:
   blogdown::html_page:
     toc: true
@@ -207,6 +207,26 @@ codigos_4u <- direita(texto = codigos, n = 4)
 codigos_4u
 ```
 
+<br>
 
+Extraindo os caracteres antes da barra de forma automatizada:
+```{r}
+codigos2 <- c("003/2020", "1242/2020", "13579/2020")
+prefixos <- substr(x = codigos2, 
+                   start = 1,
+                   stop = as.numeric(regexpr(pattern = "/", text = codigos2)) - 1)
+prefixos
+```
 
+<br>
 
+Separando o texto em função de um caracter:
+```{r}
+data_texto <- c("20/04/2020")
+data_texto
+
+data_sep <- strsplit(x = data_texto, split = "/")
+data_sep
+class(data_sep)
+```
+  

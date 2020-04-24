@@ -13,6 +13,206 @@
     </image>
     
     <item>
+      <title>Primeiros Passos</title>
+      <link>/home/classes/r-fundamentals/intro/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/home/classes/r-fundamentals/intro/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#operadores-matemáticos&#34;&gt;Operadores matemáticos:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#objetos&#34;&gt;Objetos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#principais-tipos-de-dados&#34;&gt;Principais tipos de dados&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#o-operador-c&#34;&gt;O operador &lt;code&gt;c()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gerenciando-objetos&#34;&gt;Gerenciando objetos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pacotes&#34;&gt;Pacotes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;operadores-matemáticos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Operadores matemáticos:&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Adição e subtração:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;2 + 1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5 - 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Multiplicação e divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;3 * 4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 12&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 / 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3.333333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5 / 0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] Inf&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;0 / 5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Resto da divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 %% 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Parte inteira da divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 %/% 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Parte decimal da divisão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 / 3 - 10 %/% 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.3333333&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objetos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objetos&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Regras para criar os nomes dos objetos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Não pode iniciar com número;&lt;/li&gt;
+&lt;li&gt;Não pode iniciar com símbolos, como ^, !, $, @, +, -, /, ou *.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Principais objetos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vetores&lt;/li&gt;
+&lt;li&gt;Matrizes&lt;/li&gt;
+&lt;li&gt;Listas&lt;/li&gt;
+&lt;li&gt;Data frames&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;principais-tipos-de-dados&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Principais tipos de dados&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Numérico:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n1 &amp;lt;- 5
+n1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n2 &amp;lt;- 2.76
+n2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2.76&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(n2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Texto:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t1 &amp;lt;- &amp;quot;a&amp;quot;
+t1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t2 &amp;lt;- &amp;quot;fundamentos da linguagem R&amp;quot;
+t2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;fundamentos da linguagem R&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(t2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;character&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Lógico:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;l1 &amp;lt;- TRUE
+l1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;l2 &amp;lt;- FALSE
+l2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(l2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;logical&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Data:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- Sys.Date()
+d1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2020-04-24&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(d1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Date&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Data e Hora:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- Sys.time()
+d2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2020-04-24 00:10:25 -03&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(d2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;POSIXct&amp;quot; &amp;quot;POSIXt&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Casos especiais:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;i &amp;lt;- n2 / 0
+i&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] Inf&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + i&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] Inf&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(i)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sq &amp;lt;- sqrt(-1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in sqrt(-1): NaNs produced&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sq&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + sq&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(sq)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + NA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] NA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(NA)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;logical&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;o-operador-c&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;O operador &lt;code&gt;c()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v1 &amp;lt;- c(1,2,3)
+v1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v2 &amp;lt;- c(&amp;quot;gato&amp;quot;, &amp;quot;cachorro&amp;quot;, &amp;quot;macaco&amp;quot;)
+v2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;gato&amp;quot;     &amp;quot;cachorro&amp;quot; &amp;quot;macaco&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3 &amp;lt;- c(TRUE, FALSE, TRUE)
+v3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  TRUE FALSE  TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gerenciando-objetos&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Gerenciando objetos&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Listando os objetos criados:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ls()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;d1&amp;quot; &amp;quot;d2&amp;quot; &amp;quot;i&amp;quot;  &amp;quot;l1&amp;quot; &amp;quot;l2&amp;quot; &amp;quot;n1&amp;quot; &amp;quot;n2&amp;quot; &amp;quot;sq&amp;quot; &amp;quot;t1&amp;quot; &amp;quot;t2&amp;quot; &amp;quot;v1&amp;quot; &amp;quot;v2&amp;quot; &amp;quot;v3&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Removendo um objeto:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(l1)
+ls()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;d1&amp;quot; &amp;quot;d2&amp;quot; &amp;quot;i&amp;quot;  &amp;quot;l2&amp;quot; &amp;quot;n1&amp;quot; &amp;quot;n2&amp;quot; &amp;quot;sq&amp;quot; &amp;quot;t1&amp;quot; &amp;quot;t2&amp;quot; &amp;quot;v1&amp;quot; &amp;quot;v2&amp;quot; &amp;quot;v3&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Removendo vários objetos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(v1,v2,v3)
+ls()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;d1&amp;quot; &amp;quot;d2&amp;quot; &amp;quot;i&amp;quot;  &amp;quot;l2&amp;quot; &amp;quot;n1&amp;quot; &amp;quot;n2&amp;quot; &amp;quot;sq&amp;quot; &amp;quot;t1&amp;quot; &amp;quot;t2&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Removendo todos os objetos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(list = ls())
+ls()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## character(0)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pacotes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pacotes&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Instalando o pacote &lt;i&gt;stringr&lt;/i&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;stringr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Utilizando a função &lt;code&gt;str_replace()&lt;/code&gt; do pacote &lt;i&gt;stringr&lt;/i&gt; para substituir um texto:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes &amp;lt;- c(&amp;quot;maçã&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;laranja&amp;quot;, &amp;quot;melancia&amp;quot;)
+nomes&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;maçã&amp;quot;     &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes2 &amp;lt;- stringr::str_replace(string = nomes, pattern = &amp;quot;maçã&amp;quot;, replacement = &amp;quot;uva&amp;quot;)
+nomes2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;uva&amp;quot;      &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Carregando o pacote &lt;i&gt;stringr&lt;/i&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(stringr)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Utilizando novamente a função &lt;code&gt;str_replace()&lt;/code&gt;, sem o prexixo &lt;code&gt;::stringr&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes3 &amp;lt;- str_replace(string = nomes, pattern = &amp;quot;maçã&amp;quot;, replacement = &amp;quot;uva&amp;quot;)
+nomes3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;uva&amp;quot;      &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Vetores Numéricos</title>
       <link>/home/classes/r-fundamentals/vectors/numeric/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
@@ -338,6 +538,8 @@ u &amp;lt;- c(1,2,3)
 v %*% u&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##      [,1]
 ## [1,]   20&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v %*% u)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Produto vetorial: calculando &lt;span class=&#34;math inline&#34;&gt;\(\overrightarrow{v} \times \overrightarrow{u}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v %o% u&lt;/code&gt;&lt;/pre&gt;
@@ -345,6 +547,8 @@ v %*% u&lt;/code&gt;&lt;/pre&gt;
 ## [1,]    2    4    6
 ## [2,]    3    6    9
 ## [3,]    4    8   12&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(v %o% u)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;potenciação-radiciação-e-logaritmação&#34; class=&#34;section level4&#34;&gt;
@@ -528,11 +732,11 @@ sum(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Amostragem sem reposição: selecionando 3 números aleatórios de uma sequência de 1 a 10:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;s &amp;lt;- 1:10
 sample(x = s, size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 9 8 6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 8 5 4&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample(x = s, size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 9 4 7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  8 10  1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample(x = s, size = 3)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 6 3 7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4 8 6&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Garantindo o mesmo resultado:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2020)
@@ -582,206 +786,6 @@ sample(x = s, size = 3, replace = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dado()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 5&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Introdução</title>
-      <link>/home/classes/r-fundamentals/intro/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/home/classes/r-fundamentals/intro/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#operadores-matemáticos&#34;&gt;Operadores matemáticos:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#objetos&#34;&gt;Objetos&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#principais-tipos-de-dados&#34;&gt;Principais tipos de dados&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#o-operador-c&#34;&gt;O operador &lt;code&gt;c()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#gerenciando-objetos&#34;&gt;Gerenciando objetos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pacotes&#34;&gt;Pacotes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;operadores-matemáticos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Operadores matemáticos:&lt;/h2&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Adição e subtração:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;2 + 1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5 - 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Multiplicação e divisão:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;3 * 4&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 12&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 / 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 3.333333&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5 / 0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] Inf&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;0 / 5&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Resto da divisão:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 %% 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 1&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Parte inteira da divisão:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 %/% 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 3&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Parte decimal da divisão:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;10 / 3 - 10 %/% 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.3333333&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;objetos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Objetos&lt;/h2&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Regras para criar os nomes dos objetos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Não pode iniciar com número;&lt;/li&gt;
-&lt;li&gt;Não pode iniciar com símbolos, como ^, !, $, @, +, -, /, ou *.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Principais objetos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Vetores&lt;/li&gt;
-&lt;li&gt;Matrizes&lt;/li&gt;
-&lt;li&gt;Listas&lt;/li&gt;
-&lt;li&gt;Data frames&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;div id=&#34;principais-tipos-de-dados&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Principais tipos de dados&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Numérico:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n1 &amp;lt;- 5
-n1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 5&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n2 &amp;lt;- 2.76
-n2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2.76&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(n2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Texto:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t1 &amp;lt;- &amp;quot;a&amp;quot;
-t1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t2 &amp;lt;- &amp;quot;fundamentos da linguagem R&amp;quot;
-t2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;fundamentos da linguagem R&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(t2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;character&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Lógico:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;l1 &amp;lt;- TRUE
-l1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;l2 &amp;lt;- FALSE
-l2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] FALSE&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(l2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;logical&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Data:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- Sys.Date()
-d1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2020-04-23&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(d1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Date&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Data e Hora:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- Sys.time()
-d2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2020-04-23 15:42:29 -03&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(d2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;POSIXct&amp;quot; &amp;quot;POSIXt&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Casos especiais:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;i &amp;lt;- n2 / 0
-i&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] Inf&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + i&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] Inf&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(i)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sq &amp;lt;- sqrt(-1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in sqrt(-1): NaNs produced&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sq&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + sq&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] NaN&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(sq)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1 + NA&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] NA&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(NA)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;logical&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;o-operador-c&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;O operador &lt;code&gt;c()&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v1 &amp;lt;- c(1,2,3)
-v1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 1 2 3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v2 &amp;lt;- c(&amp;quot;gato&amp;quot;, &amp;quot;cachorro&amp;quot;, &amp;quot;macaco&amp;quot;)
-v2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;gato&amp;quot;     &amp;quot;cachorro&amp;quot; &amp;quot;macaco&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;v3 &amp;lt;- c(TRUE, FALSE, TRUE)
-v3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1]  TRUE FALSE  TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;gerenciando-objetos&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Gerenciando objetos&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Listando os objetos criados:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ls()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;d1&amp;quot; &amp;quot;d2&amp;quot; &amp;quot;i&amp;quot;  &amp;quot;l1&amp;quot; &amp;quot;l2&amp;quot; &amp;quot;n1&amp;quot; &amp;quot;n2&amp;quot; &amp;quot;sq&amp;quot; &amp;quot;t1&amp;quot; &amp;quot;t2&amp;quot; &amp;quot;v1&amp;quot; &amp;quot;v2&amp;quot; &amp;quot;v3&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Removendo um objeto:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(l1)
-ls()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;d1&amp;quot; &amp;quot;d2&amp;quot; &amp;quot;i&amp;quot;  &amp;quot;l2&amp;quot; &amp;quot;n1&amp;quot; &amp;quot;n2&amp;quot; &amp;quot;sq&amp;quot; &amp;quot;t1&amp;quot; &amp;quot;t2&amp;quot; &amp;quot;v1&amp;quot; &amp;quot;v2&amp;quot; &amp;quot;v3&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Removendo vários objetos:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(v1,v2,v3)
-ls()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;d1&amp;quot; &amp;quot;d2&amp;quot; &amp;quot;i&amp;quot;  &amp;quot;l2&amp;quot; &amp;quot;n1&amp;quot; &amp;quot;n2&amp;quot; &amp;quot;sq&amp;quot; &amp;quot;t1&amp;quot; &amp;quot;t2&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Removendo todos os objetos:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm(list = ls())
-ls()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## character(0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;pacotes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pacotes&lt;/h2&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Instalando o pacote &lt;i&gt;stringr&lt;/i&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;stringr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Utilizando a função &lt;code&gt;str_replace()&lt;/code&gt; do pacote &lt;i&gt;stringr&lt;/i&gt; para substituir um texto:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes &amp;lt;- c(&amp;quot;maçã&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;laranja&amp;quot;, &amp;quot;melancia&amp;quot;)
-nomes&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;maçã&amp;quot;     &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes2 &amp;lt;- stringr::str_replace(string = nomes, pattern = &amp;quot;maçã&amp;quot;, replacement = &amp;quot;uva&amp;quot;)
-nomes2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;uva&amp;quot;      &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Carregando o pacote &lt;i&gt;stringr&lt;/i&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(stringr)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Utilizando novamente a função &lt;code&gt;str_replace()&lt;/code&gt;, sem o prexixo &lt;code&gt;::stringr&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nomes3 &amp;lt;- str_replace(string = nomes, pattern = &amp;quot;maçã&amp;quot;, replacement = &amp;quot;uva&amp;quot;)
-nomes3&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;uva&amp;quot;      &amp;quot;banana&amp;quot;   &amp;quot;laranja&amp;quot;  &amp;quot;melancia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -950,6 +954,25 @@ codigos_2p&lt;/code&gt;&lt;/pre&gt;
 codigos_4u &amp;lt;- direita(texto = codigos, n = 4)
 codigos_4u&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;1234&amp;quot; &amp;quot;4321&amp;quot; &amp;quot;5678&amp;quot; &amp;quot;8765&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Extraindo os caracteres antes da barra de forma automatizada:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;codigos2 &amp;lt;- c(&amp;quot;003/2020&amp;quot;, &amp;quot;1242/2020&amp;quot;, &amp;quot;13579/2020&amp;quot;)
+prefixos &amp;lt;- substr(x = codigos2, 
+                   start = 1,
+                   stop = as.numeric(regexpr(pattern = &amp;quot;/&amp;quot;, text = codigos2)) - 1)
+prefixos&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;003&amp;quot;   &amp;quot;1242&amp;quot;  &amp;quot;13579&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Separando o texto em função de um caracter:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_texto &amp;lt;- c(&amp;quot;20/04/2020&amp;quot;)
+data_texto&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;20/04/2020&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_sep &amp;lt;- strsplit(x = data_texto, split = &amp;quot;/&amp;quot;)
+data_sep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] &amp;quot;20&amp;quot;   &amp;quot;04&amp;quot;   &amp;quot;2020&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(data_sep)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;list&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
