@@ -1532,7 +1532,7 @@ div.tocify {
 <h3 class="subtitle">Fundamentos da Linguagem R</h3>
 <h4 class="author">Antonio C. da Silva Júnior</h4>
 <h4 class="author"><a href="https://juniorssz.github.io/home/" class="uri">https://juniorssz.github.io/home/</a></h4>
-<h4 class="date">25/04/2020</h4>
+<h4 class="date">26/04/2020</h4>
 
 </div>
 
@@ -1586,6 +1586,34 @@ div.tocify {
 <pre class="r"><code>numero_1</code></pre>
 <pre><code>## [1] 4</code></pre>
 <p><br></p>
+<div id="gerenciando-objetos" class="section level2">
+<h2><span class="header-section-number">1.1</span> Gerenciando objetos</h2>
+<p><br></p>
+<p>Listando os objetos criados:</p>
+<pre class="r"><code>obj1 &lt;- 1
+obj2 &lt;- 2
+obj3 &lt;- 3
+obj4 &lt;- 4
+
+ls()</code></pre>
+<pre><code>## [1] &quot;animal&quot;   &quot;estado1&quot;  &quot;numero_1&quot; &quot;obj1&quot;     &quot;obj2&quot;     &quot;obj3&quot;     &quot;obj4&quot;</code></pre>
+<p><br></p>
+<p>Removendo um objeto:</p>
+<pre class="r"><code>rm(animal)
+ls()</code></pre>
+<pre><code>## [1] &quot;estado1&quot;  &quot;numero_1&quot; &quot;obj1&quot;     &quot;obj2&quot;     &quot;obj3&quot;     &quot;obj4&quot;</code></pre>
+<p><br></p>
+<p>Removendo vários objetos:</p>
+<pre class="r"><code>rm(obj2, obj3, obj4)
+ls()</code></pre>
+<pre><code>## [1] &quot;estado1&quot;  &quot;numero_1&quot; &quot;obj1&quot;</code></pre>
+<p><br></p>
+<p>Removendo todos os objetos:</p>
+<pre class="r"><code>rm(list = ls())
+ls()</code></pre>
+<pre><code>## character(0)</code></pre>
+<p><br></p>
+</div>
 </div>
 <div id="principais-tipos-de-dados" class="section level1">
 <h1><span class="header-section-number">2</span> Principais Tipos de Dados</h1>
@@ -1674,7 +1702,7 @@ l4</code></pre>
 <p><br></p>
 <pre class="r"><code>d1 &lt;- Sys.Date()
 d1</code></pre>
-<pre><code>## [1] &quot;2020-04-25&quot;</code></pre>
+<pre><code>## [1] &quot;2020-04-26&quot;</code></pre>
 <p><br></p>
 <pre class="r"><code>class(d1)</code></pre>
 <pre><code>## [1] &quot;Date&quot;</code></pre>
@@ -1685,7 +1713,7 @@ d1</code></pre>
 <p><br></p>
 <pre class="r"><code>d2 &lt;- Sys.time()
 d2</code></pre>
-<pre><code>## [1] &quot;2020-04-25 23:33:41 -03&quot;</code></pre>
+<pre><code>## [1] &quot;2020-04-26 15:26:14 -03&quot;</code></pre>
 <pre class="r"><code>class(d2)</code></pre>
 <pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
 <p><br></p>
