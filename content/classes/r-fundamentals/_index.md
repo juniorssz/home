@@ -17,5 +17,5 @@ image:
 projects: []
 ---
 
-* [01 - Matemática no R](/classes/r-fundamentals/01-math.html)
-* [02 - Objetos e Principais Tipos de Dados](/classes/r-fundamentals/01-math.html)
+* [01 - Matemática no R](/home/classes/r-fundamentals/01-math.html)
+* [02 - Objetos e Principais Tipos de Dados](/home/classes/r-fundamentals/01-math.html)
