@@ -18,5 +18,5 @@ projects: []
 ---
 
 * [01 - Matemática no R](/home/classes/r-fundamentals/01-math.html)
-* [02 - Objetos e Principais Tipos de Dados](/home/classes/r-fundamentals/01-math.html)
+* [02 - Objetos e Principais Tipos de Dados](/home/classes/r-fundamentals/02-objects-and-datatypes.html)
 * [03 - Vetores](#)
