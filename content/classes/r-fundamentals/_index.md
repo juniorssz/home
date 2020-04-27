@@ -17,7 +17,8 @@ image:
 projects: []
 ---
 
-* [01 - Matemática no R](/home/classes/r-fundamentals/01-math.html)
-* [02 - Objetos e Principais Tipos de Dados](/home/classes/r-fundamentals/02-objects-and-datatypes.html)
-* [03 - Vetores](/home/classes/r-fundamentals/03-0-vectors.html)
-  * [03.1 - Vetores Numéricos](/home/classes/r-fundamentals/03-1-numeric-vectors.html)
+* [01 - Matemática no R](/home/classes/r-fundamentals/rbasics-math.html)
+* [02 - Objetos e Principais Tipos de Dados](/home/classes/r-fundamentals/rbasics-objects-and-datatypes.html)
+* [03 - Vetores](/home/classes/r-fundamentals/vectors.html)
+  * [03.1 - Vetores Numéricos](/home/classes/r-fundamentals/vectors-numeric.html)
+  * [03.2 - Vetores de Texto](/home/classes/r-fundamentals/vectors-character.html)
