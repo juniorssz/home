@@ -23,3 +23,6 @@ projects: []
   * [03.1 - Vetores Numéricos](/home/classes/r-fundamentals/vectors-numeric.html)
   * [03.2 - Vetores de Texto](/home/classes/r-fundamentals/vectors-character.html)
   * [03.3 - Vetores Lógicos](/home/classes/r-fundamentals/vectors-logical.html)
+* [04 - Matrizes](#)
+* [05 - Data Frames](/home/classes/r-fundamentals/data-frames.html)
+* [06 - Listas](#)
