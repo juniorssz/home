@@ -1,5 +1,5 @@
 ---
-title: Fundamentos da Linguagem R
+title: Fundamentos da Linguagem R (material em andamento)
 author: ''
 date: '2020-04-22'
 slug: _index
