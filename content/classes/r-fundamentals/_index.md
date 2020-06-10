@@ -24,7 +24,7 @@ projects: []
   * [03.2 - Texto](/home/classes/r-fundamentals/vectors-character.html)
   * [03.3 - Lógicos](/home/classes/r-fundamentals/vectors-logical.html)
   * [03.4 - Fatores](/home/classes/r-fundamentals/vectors-factor.html)
-  * [03.5 - Algumas funções](/home/classes/r-fundamentals/vectors-otherfuncs.html)
+  * [03.5 - Outras funcionalidades](/home/classes/r-fundamentals/vectors-othersfunc.html)
 * [04 - Matrizes](/home/classes/r-fundamentals/matrices.html)
 * [05 - Data Frames](/home/classes/r-fundamentals/data-frames.html)
 * [06 - Listas](/home/classes/r-fundamentals/lists.html)
