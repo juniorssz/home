@@ -1,5 +1,5 @@
 ---
-title: Fundamentos da Linguagem R (material em andamento)
+title: Fundamentos da Linguagem R (material em construção)
 author: ''
 date: '2020-04-22'
 slug: _index
@@ -28,3 +28,6 @@ projects: []
 * [04 - Matrizes](/home/classes/r-fundamentals/matrices.html)
 * [05 - Data Frames](/home/classes/r-fundamentals/data-frames.html)
 * [06 - Listas](/home/classes/r-fundamentals/lists.html)
+* [07 - Leitura e Escrita de Arquivos](#)
+* [08 - Visualização Básica](#)
+* [09 - Lógica de Programação Básica](#)
