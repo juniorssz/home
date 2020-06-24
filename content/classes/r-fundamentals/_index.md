@@ -28,6 +28,6 @@ projects: []
 * [04 - Matrizes](/home/classes/r-fundamentals/matrices.html)
 * [05 - Data Frames](/home/classes/r-fundamentals/data-frames.html)
 * [06 - Listas](/home/classes/r-fundamentals/lists.html)
-* [07 - Leitura e Escrita de Arquivos](#)
-* [08 - Visualização Básica](#)
+* [07 - Leitura e Escrita de Arquivos](/home/classes/r-fundamentals/data-frames-read-and-write.html)
+* [08 - Visualização Básica](/home/classes/r-fundamentals/dataviz-basics.html)
 * [09 - Lógica de Programação Básica](#)
