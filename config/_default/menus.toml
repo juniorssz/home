@@ -41,12 +41,17 @@
 [[main]]
   name = "Tutoriais"
   url = "/tutorials"
-  weight = 59
+  weight = 60
+  
+  [[main]]
+  name = "Apresentações"
+  url = "/presentations"
+  weight = 70
 
 [[main]]
   name = "Contato"
   url = "#contact"
-  weight = 60
+  weight = 100
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
