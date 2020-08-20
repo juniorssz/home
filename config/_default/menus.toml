@@ -43,10 +43,15 @@
   url = "/tutorials"
   weight = 60
   
-  [[main]]
+[[main]]
   name = "Apresentações"
   url = "/presentations"
   weight = 70
+  
+[[main]]
+  name = "Currículo"
+  url = "/cv/cv.pdf"
+  weight = 80
 
 [[main]]
   name = "Contato"

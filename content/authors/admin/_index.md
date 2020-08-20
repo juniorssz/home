@@ -25,6 +25,12 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/juniorssz
+- icon: lattes
+  icon_pack: ai
+  link: http://lattes.cnpq.br/9538279526734312
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Antonio_Carlos_Da_Silva_Junior
 superuser: true
 title: Antonio C. da Silva Júnior
 user_groups:
