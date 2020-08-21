@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apresentações | juniorssz</title>
-    <link>/home/presentations/</link>
-      <atom:link href="/home/presentations/index.xml" rel="self" type="application/rss+xml" />
+    <link>/acsjunior.com/presentations/</link>
+      <atom:link href="/acsjunior.com/presentations/index.xml" rel="self" type="application/rss+xml" />
     <description>Apresentações</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/home/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/acsjunior.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Apresentações</title>
-      <link>/home/presentations/</link>
+      <link>/acsjunior.com/presentations/</link>
     </image>
     
   </channel>
